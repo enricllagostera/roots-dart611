@@ -5,3 +5,11 @@ public enum LeafStatus
     MATURE,
     WITHERING
 }
+
+public enum FlowerStatus
+{
+    DORMANT,
+    BLOSSOM,
+    MATURE,
+    WITHERING
+}

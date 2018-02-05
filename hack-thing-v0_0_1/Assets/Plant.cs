@@ -25,6 +25,7 @@ public class Plant : MonoBehaviour
     public List<NutrientSource> nutrients;
     public List<KeyCode> nutrientsKeycodes;
 
+    public Flower flower;
 
     void Start()
     {
@@ -78,6 +79,17 @@ public class Plant : MonoBehaviour
                 WitherLeaf();
             }
         }
+
+        bool allMatureLeaves = true;
+        foreach (var leaf in leaves)
+        {
+            if (leaf.status != LeafStatus.MATURE)
+            {
+                allMatureLeaves = false;
+                break;
+            }
+        }
+        flower.CalculateStatus((allMatureLeaves) ? 1f : -1f);
 
         if (health <= 0 && !dead)
         {
