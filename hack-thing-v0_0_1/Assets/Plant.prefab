@@ -447,7 +447,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  nutrientsKeycodes: 11010000120100001401000013010000
+  - {fileID: 0}
+  nutrientsKeycodes: 1101000012010000140100001301000020000000
   flower: {fileID: 114033422100698510}
   nutrientRate: 0
 --- !u!212 &212417422252476432
