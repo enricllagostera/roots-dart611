@@ -27,6 +27,8 @@ public class Plant : MonoBehaviour
 
     public Flower flower;
 
+    public float nutrientRate;
+
     void Start()
     {
         Reset();
@@ -44,18 +46,20 @@ public class Plant : MonoBehaviour
 
         if (dead)
         {
+            Destroy(gameObject);
+            Garden.Instance.plantCount--;
             return;
         }
 
-        float nutrientSum = 0f;
+        nutrientRate = 0f;
         for (int i = 0; i < nutrients.Count; i++)
         {
             if (Input.GetKey(nutrientsKeycodes[i]))
             {
-                nutrientSum += nutrients[i].Drain() / nutrients.Count;
+                nutrientRate += nutrients[i].Drain();
             }
         }
-        health += nutrientSum * Time.deltaTime;
+        health += nutrientRate * Time.deltaTime;
 
         // decrease health based on withering curve over lifetime
         health -= (1f - witheringCurve.Evaluate(timer / lifetimeMax)) * healthDecayRate * Time.deltaTime;
@@ -109,7 +113,7 @@ public class Plant : MonoBehaviour
     void Reset()
     {
         dead = false;
-        health = 0.1f;
+        health = 0.2f;
         humidity = 1f;
         timer = 0f;
         lastLeafTime = Time.realtimeSinceStartup;

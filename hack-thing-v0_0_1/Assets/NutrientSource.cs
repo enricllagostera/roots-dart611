@@ -19,14 +19,20 @@ public class NutrientSource : MonoBehaviour
 
     void Update()
     {
-        level += regenerationRate * Time.deltaTime;
+        float plantMod = (Garden.Instance.plantCount == 0f) ? 1f : Garden.Instance.plantCount;
+        level += regenerationRate * Time.deltaTime * plantMod;
+        level = Mathf.Clamp(level, 0, levelMax);
         float coeficient = level / levelMax;
         visual.color = colors.Evaluate(coeficient);
     }
 
     public float Drain()
     {
-        level = Mathf.Clamp(level - drainRate * Time.deltaTime, 0, levelMax);
-        return level;
+        level = Mathf.Clamp(level - (drainRate * Time.deltaTime), 0, levelMax);
+        if (level > 0f)
+        {
+            return drainRate;
+        }
+        return 0f;
     }
 }

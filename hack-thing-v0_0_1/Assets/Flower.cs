@@ -34,6 +34,7 @@ public class Flower : MonoBehaviour
                 _targetColor = blossomColor;
                 break;
             case FlowerStatus.MATURE:
+                Garden.Instance.UpdateGarden();
                 _targetColor = matureColor;
                 break;
             case FlowerStatus.WITHERING:
