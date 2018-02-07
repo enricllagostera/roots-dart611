@@ -15,6 +15,8 @@ public class Flower : MonoBehaviour
     private Color _targetColor;
     public float colorFadeFactor;
 
+    public Sprite[] spriteStatus;
+
     void Start()
     {
         _visual = GetComponentInChildren<SpriteRenderer>();
@@ -28,17 +30,21 @@ public class Flower : MonoBehaviour
         switch (status)
         {
             case FlowerStatus.DORMANT:
-                _targetColor = Color.clear;
+                _targetColor = Color.white;
+                _visual.sprite = null;
                 break;
             case FlowerStatus.BLOSSOM:
-                _targetColor = blossomColor;
+                _targetColor = Color.white;
+                _visual.sprite = spriteStatus[0];
                 break;
             case FlowerStatus.MATURE:
                 Garden.Instance.UpdateGarden();
-                _targetColor = matureColor;
+                _targetColor = Color.white;
+                _visual.sprite = spriteStatus[1];
                 break;
             case FlowerStatus.WITHERING:
-                _targetColor = witheringColor;
+                _targetColor = Color.white;
+                _visual.sprite = spriteStatus[2];
                 break;
         }
 

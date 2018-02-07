@@ -14,7 +14,6 @@ public class Plant : MonoBehaviour
     public float lastLeafTime;
     public float leafInterval;
     public Leaf[] leaves;
-    public Leaf leafPrefab;
 
     public float heightMax;
     public float lifetimeMax;

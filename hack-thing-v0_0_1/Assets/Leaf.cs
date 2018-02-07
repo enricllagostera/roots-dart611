@@ -11,6 +11,7 @@ public class Leaf : MonoBehaviour
     private SpriteRenderer _visual;
     private Color _targetColor;
     public float colorFadeFactor;
+    public Sprite[] statusSprite;
 
     void Start()
     {
@@ -25,16 +26,20 @@ public class Leaf : MonoBehaviour
         switch (status)
         {
             case LeafStatus.DORMANT:
-                _targetColor = Color.clear;
+                _targetColor = Color.white;
+                _visual.sprite = null;
                 break;
             case LeafStatus.YOUNG:
-                _targetColor = youngLeaf;
+                _targetColor = Color.white; ;
+                _visual.sprite = statusSprite[0];
                 break;
             case LeafStatus.MATURE:
-                _targetColor = matureLeaf;
+                _targetColor = Color.white; ;
+                _visual.sprite = statusSprite[1];
                 break;
             case LeafStatus.WITHERING:
-                _targetColor = witheringLeaf;
+                _targetColor = Color.white; ;
+                _visual.sprite = statusSprite[2];
                 break;
         }
         _visual.color = Color.Lerp(_visual.color, _targetColor, Time.deltaTime * colorFadeFactor);
