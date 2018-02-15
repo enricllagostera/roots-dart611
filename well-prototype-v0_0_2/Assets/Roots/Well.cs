@@ -14,6 +14,9 @@ public class Well : MonoBehaviour
     [Range(0.01f, 5f)]
     public float timeScale = 1f;
 
+    public float activeLayerMin;
+    public float activeLayerMax;
+
 
     void Start()
     {
@@ -33,6 +36,10 @@ public class Well : MonoBehaviour
         for (int i = 0; i < groundLayers.Length; i++)
         {
             float layerProgress = (progress + (layerOffset * i)) % 1f;
+            if (layerProgress >= activeLayerMin && layerProgress <= activeLayerMax)
+            {
+                Roots.Instance.SetActiveLayer(groundLayers[i]);
+            }
             groundLayers[i].transform.localScale = Vector3.one * scaleCurve.Evaluate(layerProgress);
             groundLayers[i].visual.color = gradient.Evaluate(layerProgress);
             groundLayers[i].visual.sortingOrder = (int)(groundLayers[i].transform.localScale.x * 100f);

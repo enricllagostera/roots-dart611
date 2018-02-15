@@ -4,7 +4,6 @@ using System.Collections.Generic;
 public class Plant : MonoBehaviour
 {
     // input
-    public InputPoolConfig inputPool;
     public KeyCode nutrientKey;
     public KeyCode growthKey;
     public KeyCode reproduceKey;
@@ -28,8 +27,6 @@ public class Plant : MonoBehaviour
         // gameplay init
         health = 1f;
         growth = 0f;
-        // inputs
-        RandomizeInputs();
     }
 
 
@@ -53,9 +50,9 @@ public class Plant : MonoBehaviour
         transform.localScale = scale;
     }
 
-    void RandomizeInputs()
+    public void RandomizeInputs()
     {
-        List<KeyCode> keys = new List<KeyCode>(inputPool.all);
+        List<KeyCode> keys = new List<KeyCode>(Roots.Instance.availableInputs);
         int assigned = 0;
         while (assigned < 3)
         {
@@ -69,12 +66,19 @@ public class Plant : MonoBehaviour
             {
                 growthKey = pick;
             }
-            else
+            else if (assigned == 2)
             {
                 reproduceKey = pick;
             }
             assigned++;
             keys.RemoveAt(i);
         }
+    }
+
+    public void ClearInputs()
+    {
+        nutrientKey = KeyCode.None;
+        growthKey = KeyCode.None;
+        reproduceKey = KeyCode.None;
     }
 }
