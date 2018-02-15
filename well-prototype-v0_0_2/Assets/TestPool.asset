@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6161ddf01e3df5488607edaa53bfcc7, type: 3}
+  m_Name: TestPool
+  m_EditorClassIdentifier: 
+  trees:
+  - {fileID: 4428799506741360, guid: ad1bdcff0790b5e45b55760ea92b9cec, type: 2}
+  grass:
+  - {fileID: 4856206481289894, guid: b196aed3d384a424eb299057f1184ac6, type: 2}
+  props: []
