@@ -4,7 +4,8 @@ using System.Collections.Generic;
 [CreateAssetMenu()]
 public class PoolConfig : ScriptableObject
 {
-    public List<Transform> trees;
-    public List<Transform> grass;
-    public List<Transform> props;
+    public List<PlantInfo> trees;
+    public List<PlantInfo> flowers;
+    public List<PlantInfo> grass;
+    public List<PlantInfo> props;
 }

@@ -19,10 +19,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4998131850080622}
+  - component: {fileID: 114904067301625924}
   m_Layer: 0
   m_Name: Plant
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -62,8 +63,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1459347649242142}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.02, y: -3.96, z: 0.093253285}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4417123468298722}
@@ -87,6 +88,31 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114904067301625924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1459347649242142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35808e282e46c8144b6b8d88f49d80aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantIndex: 3
+  nutrientKey: 113
+  growthKey: 119
+  reproduceKey: 101
+  growth: 0
+  health: 0
+  growthSpeed: 1
+  healthSpeed: 1
+  growthDecay: 0.5
+  healthDecay: 0.5
+  wiltSpeed: 0.05
+  baseSpeed: 0.05
+  activeGrowth: 0
+  activeNutrient: 0
 --- !u!212 &212201130950560466
 SpriteRenderer:
   m_ObjectHideFlags: 1
