@@ -154,6 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96de8191b803d4449762fa5f8515ff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxPlants: 60
+  preferredMinDistance: 1
   _plantPrefab: {fileID: 114904067301625924, guid: ad4218e988a27ba40818ce2b40dafdac,
     type: 2}
   _plantLineRadius: 4.36

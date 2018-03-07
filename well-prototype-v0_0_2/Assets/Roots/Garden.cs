@@ -5,6 +5,7 @@ using UnityEngine;
 public class Garden : MonoBehaviour
 {
     public int maxPlants;
+    public float preferredMinDistance;
     [SerializeField] private Plant _plantPrefab;
     [SerializeField] private float _plantLineRadius;
     [SerializeField] private PoolConfig _pool;
@@ -91,7 +92,26 @@ public class Garden : MonoBehaviour
 
     Vector3 GetPlantPosition()
     {
+        int maxTries = 5;
+        var plants = GetComponentsInChildren<Plant>();
         Vector3 random = Random.insideUnitCircle.normalized * _plantLineRadius;
+        for (int i = 0; i < maxTries; i++)
+        {
+            bool found = true;
+            random = Random.insideUnitCircle.normalized * _plantLineRadius;
+            foreach (var plant in plants)
+            {
+                if (Vector3.Distance(plant.transform.position, random) < preferredMinDistance)
+                {
+                    found = false;
+                    break;
+                }
+            }
+            if (found)
+            {
+                return random;
+            }
+        }
         return random;
     }
 
