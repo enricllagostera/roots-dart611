@@ -161,7 +161,7 @@ MonoBehaviour:
   _plantLineRadius: 4.36
   _pool: {fileID: 11400000, guid: a3a1e8419685a304f8980e502b023c69, type: 2}
   _randomizer: 0
-  _treeProbability: 0.35
+  _treeProbability: 0.6
   _flowerProbability: 0.7
   _grassProbability: 1
   _propProbability: 0

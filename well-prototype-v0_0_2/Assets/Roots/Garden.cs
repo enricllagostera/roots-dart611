@@ -71,6 +71,7 @@ public class Garden : MonoBehaviour
     }
 
 
+    /// Internal function used for basic spawning of the layer.
     void SpawnFrom(List<PlantInfo> plantInfos, Vector3 position)
     {
         if (plantInfos.Count <= 0)
@@ -116,6 +117,7 @@ public class Garden : MonoBehaviour
     }
 
 
+    /// Function for creating new plant based on complete info. Used for plant reproduction.
     public void CreatePlant(PlantInfo info)
     {
         if (GetComponentsInChildren<Plant>().Length + 1 >= maxPlants)

@@ -96,7 +96,6 @@ public class Plant : MonoBehaviour
 
     public void Reproduce()
     {
-        Debug.Log("Repro ");
         transform.parent.GetComponent<Garden>().CreatePlant(info);
     }
 }
