@@ -161,11 +161,11 @@ MonoBehaviour:
   _plantLineRadius: 4.36
   _pool: {fileID: 11400000, guid: a3a1e8419685a304f8980e502b023c69, type: 2}
   _randomizer: 0
-  _treeProbability: 0.6
+  _treeProbability: 0.4
   _flowerProbability: 0.7
   _grassProbability: 1
   _propProbability: 0
-  _initialPlantCount: 5
+  _initialPlantCount: 20
   _baseSortingOrder: 0
 --- !u!1 &41229158
 GameObject:
@@ -208,7 +208,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.7136678, g: 0.8404725, b: 0.88235295, a: 0}
+  m_BackGroundColor: {r: 0.5865052, g: 0.77020943, b: 0.8308824, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -299,7 +299,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 2da62c335e4d28846914adde4791dc6b, type: 3}
-  m_Color: {r: 0.44707972, g: 0.49264705, b: 0.28616998, a: 1}
+  m_Color: {r: 0.7114396, g: 0.78676474, b: 0.44544768, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
