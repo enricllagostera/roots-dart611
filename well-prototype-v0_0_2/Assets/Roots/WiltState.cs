@@ -13,17 +13,28 @@ public class WiltState : PlantStateBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        animator.SetFloat("PlantSwitch", plant.plantIndex / 11f);
         if (plant.activeNutrient)
         {
             plant.health += Time.deltaTime * plant.healthSpeed;
         }
         plant.health -= Time.deltaTime * plant.healthDecay;
+        // if the plant is healthy enough, it will count the time to reproduce
+        if (plant.health >= 0.95f)
+        {
+            plant.reproductionTimer -= Time.deltaTime;
+            if (plant.reproductionTimer < 0)
+            {
+                plant.reproductionTimer = plant.reproductionInterval;
+                plant.Reproduce();
+            }
+        }
         plant.growth = Mathf.Clamp01(plant.growth);
         plant.health = Mathf.Clamp01(plant.health);
         plant.growth = plant.health;
         if (plant.health <= 0f)
         {
-            animator.Play("growthBT", 0, 0f);
+            Destroy(animator.transform.parent.gameObject);
             return;
         }
         else

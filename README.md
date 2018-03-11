@@ -1,10 +1,14 @@
 # Project Logs
 
-## 2018-03-05
+## 2018-03-05 to 07
 
 ### Enric
 
 Today I'll do some work on putting the plants art into the game. After doing that, we'll be able to prepare the game logic to follow the growth / wilt cycle.
+
+After a lot of struggling with Unity's animation system, I managed to get a continuous transition between growing an wilting that is already integrated with the gameplay variables. From there, it was quite quick to get some other features working: plant reproduction and the wind animation via shaders.
+
+Now I'm focusing on getting the bee animations that Rebecca made and create a basic non-player character (NPC) that uses them. The biggest challenge in this is getting the circular movement working. I'll try out some math-based one, but if it doesn't work I'll work with splines and animation.
 
 ## 2018-03-01
 

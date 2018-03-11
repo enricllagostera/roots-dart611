@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class Plant : MonoBehaviour
 {
     public int plantIndex;
+    public PlantInfo info;
     // input
     public KeyCode nutrientKey;
     public KeyCode growthKey;
@@ -20,11 +21,13 @@ public class Plant : MonoBehaviour
     private ParticleFX nutrientFX;
     private ParticleFX reproduceFX;
     private SpriteRenderer _visual;
-    private Animator _animator;
     public float baseSpeed;
 
     public bool activeGrowth;
     public bool activeNutrient;
+
+    public float reproductionTimer;
+    public float reproductionInterval;
 
     void Start()
     {
@@ -32,14 +35,12 @@ public class Plant : MonoBehaviour
         //nutrientFX = transform.Find("Nutrient").GetComponentInChildren<ParticleFX>();
         //reproduceFX = transform.Find("Reproduce").GetComponentInChildren<ParticleFX>();
         _visual = GetComponentInChildren<SpriteRenderer>();
-        _animator = GetComponentInChildren<Animator>();
         // gameplay init
         health = 0f;
         growth = 0f;
         baseSpeed = 0.1f;
         // plant index
-        _animator.SetFloat("PlantSwitch", plantIndex / 12f);
-        _animator.SetFloat("AnimSpeed", 0f);
+        reproductionTimer = reproductionInterval;
     }
 
 
@@ -58,10 +59,6 @@ public class Plant : MonoBehaviour
         //reproduceFX.Run(reproduceInput, _visual.sortingOrder);
         activeGrowth = Input.GetKey(this.growthKey);
         activeNutrient = Input.GetKey(this.nutrientKey);
-
-        // final number cleanup
-        _animator.SetFloat("Growth", growth);
-        _animator.SetFloat("Health", health);
     }
 
     public void RandomizeInputs()
@@ -94,5 +91,11 @@ public class Plant : MonoBehaviour
         nutrientKey = KeyCode.None;
         growthKey = KeyCode.None;
         reproduceKey = KeyCode.None;
+    }
+
+
+    public void Reproduce()
+    {
+        transform.parent.GetComponent<Garden>().CreatePlant(info);
     }
 }
