@@ -13,6 +13,10 @@ public class WiltState : PlantStateBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (plant.age <= 0f)
+        {
+            return;
+        }
         animator.SetFloat("PlantSwitch", plant.plantIndex / 11f);
         if (plant.activeNutrient)
         {
@@ -34,7 +38,9 @@ public class WiltState : PlantStateBehaviour
         plant.growth = plant.health;
         if (plant.health <= 0f)
         {
-            Destroy(animator.transform.parent.gameObject);
+            Destroy(animator.transform.parent.gameObject, 60f);
+            plant.isAlive = false;
+            plant.age *= -1f;
             return;
         }
         else

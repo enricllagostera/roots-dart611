@@ -16,7 +16,6 @@ public class Plant : MonoBehaviour
     public float healthSpeed;
     public float growthDecay;
     public float healthDecay;
-    public float wiltSpeed;
     //FX
     private ParticleFX nutrientFX;
     private ParticleFX reproduceFX;
@@ -28,6 +27,9 @@ public class Plant : MonoBehaviour
 
     public float reproductionTimer;
     public float reproductionInterval;
+
+    public float age;
+    public bool isAlive;
 
     void Start()
     {
@@ -41,6 +43,8 @@ public class Plant : MonoBehaviour
         baseSpeed = 0.1f;
         // plant index
         reproductionTimer = reproductionInterval;
+        age = 0f;
+        isAlive = true;
     }
 
 
@@ -59,6 +63,7 @@ public class Plant : MonoBehaviour
         //reproduceFX.Run(reproduceInput, _visual.sortingOrder);
         activeGrowth = Input.GetKey(this.growthKey);
         activeNutrient = Input.GetKey(this.nutrientKey);
+        age += Time.deltaTime * ((isAlive) ? 1f : -1f);
     }
 
     public void RandomizeInputs()

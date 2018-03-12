@@ -13,3 +13,13 @@ public enum EPlant
     BIO03_GRASS02 = 10,
     BIO03_TREE01 = 11
 }
+
+public enum EBeehavior
+{
+    IDLE,
+    SURPRISED,
+    PLAY,
+    REST,
+    SAD,
+    HAPPY
+}

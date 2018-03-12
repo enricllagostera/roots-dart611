@@ -1,8 +1,15 @@
 # Project Logs
 
+## 2018-03-12
+
+### Enric
+
+Today I'll work on making a basic bee AI. With this addition, we might have the basic loop and most of the in-game elements ready for Thursday's presentation. I think that besides including the bee and well dynamic, I should put some work on the feedback on growth and nutrition actions.  
+
 ## 2018-03-10
+
 ### Rebecca
-Tonight I pushed what should be the last of our basic animations up. The roots draining has been giving me a hard time, and I'm not 100% satisfied so maybe that will need revision... Enric had had an interesting comment about it yesterday though, saying that it looked more "animal" than plant - I think it's interesting to think about how the roots, the unseen, is maybe the scariest/strangest part of the experience... 
+Tonight I pushed what should be the last of our basic animations up. The roots draining has been giving me a hard time, and I'm not 100% satisfied so maybe that will need revision... Enric had had an interesting comment about it yesterday though, saying that it looked more "animal" than plant - I think it's interesting to think about how the roots, the unseen, is maybe the scariest/strangest part of the experience...
 
 ## 2018-03-05 to 07
 
