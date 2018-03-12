@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Well : MonoBehaviour
 {
-    public AnimationCurve scaleCurve;
+    public AnimationCurve movementCurve;
     public float layerOffset;
     public Gradient gradient;
-    public GroundLayer[] groundLayers;
+    public Garden[] gardenLayers;
     public float loopTime;
     public float timer;
 
@@ -16,16 +16,16 @@ public class Well : MonoBehaviour
 
     public float activeLayerMin;
     public float activeLayerMax;
-
+    public float wellDepth;
 
     void Start()
     {
-        groundLayers = FindObjectsOfType<GroundLayer>();
-        foreach (var layer in groundLayers)
+        gardenLayers = FindObjectsOfType<Garden>();
+        foreach (var layer in gardenLayers)
         {
-            layer.visual.transform.Rotate(0f, 0f, Random.Range(0f, 360f));
+            //layer.visual.transform.Rotate(0f, 0f, Random.Range(0f, 360f));
         }
-        layerOffset = 1f / groundLayers.Length;
+        layerOffset = 1f / gardenLayers.Length;
     }
 
 
@@ -33,16 +33,13 @@ public class Well : MonoBehaviour
     {
         Time.timeScale = timeScale;
         float progress = (Time.time % loopTime).Map(0, loopTime, 0, 1);
-        for (int i = 0; i < groundLayers.Length; i++)
+        for (int i = 0; i < gardenLayers.Length; i++)
         {
             float layerProgress = (progress + (layerOffset * i)) % 1f;
-            if (layerProgress >= activeLayerMin && layerProgress <= activeLayerMax)
-            {
-                Roots.Instance.SetActiveLayer(groundLayers[i]);
-            }
-            groundLayers[i].transform.localScale = Vector3.one * scaleCurve.Evaluate(layerProgress);
-            groundLayers[i].visual.color = gradient.Evaluate(layerProgress);
-            groundLayers[i].visual.sortingOrder = (int)(groundLayers[i].transform.localScale.x * 100f);
+            gardenLayers[i].progress = layerProgress;
+            gardenLayers[i].transform.position = new Vector3(0, 0, movementCurve.Evaluate(layerProgress) * wellDepth);
+            // gardenLayers[i].visual.color = gradient.Evaluate(layerProgress);
+            gardenLayers[i].baseSortingOrder = (int)(gardenLayers[i].transform.position.z * -20f);
         }
     }
 }

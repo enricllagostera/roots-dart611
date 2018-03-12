@@ -14,6 +14,12 @@ I'm thinking that a basic behaviour could be expressed as a flowchart. This is a
 
 When implementing it, I improved it to allow for 1) picking just plants on the same garden for logic and 2) avoid repeated behavior (never repeats the same action twice). It works quite well as a flow right now. It can be improved with some priorization (an idea: SAD -> HAPPY -> SURPRISED -> REST -> PLAY). This would entail some changes on how data and config is done for each action. Not a big issue, actually.
 
+#### Well dynamics
+
+Ok, got the static garden we had created earlier to work well with the "well" movement of layers. For that I changed that system to work with a perspective camera instead of a scaling dynamic, but I kept the AnimationCurve for tweaking. It worked quite well, and I also used the time to add a fog system that is customized via a gradient. You can see it working on the gif below. The visuals are ok. In terms of functionality, I still need to reset the last layer, so that recycle properly.
+
+![](documentation/2018-03-12/bee-well.gif)
+
 ## 2018-03-10
 
 ### Rebecca

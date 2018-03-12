@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Garden : MonoBehaviour
 {
+    public float progress;
     public int maxPlants;
     public float preferredMinDistance;
     [SerializeField] private Plant _plantPrefab;
@@ -15,10 +16,16 @@ public class Garden : MonoBehaviour
     [SerializeField] private float _grassProbability;
     [SerializeField] private float _propProbability;
     [SerializeField] private int _initialPlantCount;
-    [SerializeField] private int _baseSortingOrder;
+    [SerializeField] public int baseSortingOrder;
+    private Fog _fog;
+    private Bee _bee;
+    public List<Plant> plants;
 
     void Start()
     {
+        _fog = GetComponentInChildren<Fog>();
+        _bee = GetComponentInChildren<Bee>();
+        plants = new List<Plant>();
         // totally random probabilities for testing
         if (_randomizer)
         {
@@ -59,8 +66,15 @@ public class Garden : MonoBehaviour
     }
 
 
-    void Update()
+    void LateUpdate()
     {
+        _fog.UpdateColor(progress, baseSortingOrder + 20);
+        _bee.sorting = baseSortingOrder + 10;
+        transform.Find("Ground").GetComponent<SpriteRenderer>().sortingOrder = baseSortingOrder - 200;
+        foreach (var plant in plants)
+        {
+            plant.GetComponentInChildren<SpriteRenderer>().sortingOrder = baseSortingOrder + plant.info.sortingOrderMod;
+        }
     }
 
 
@@ -80,14 +94,16 @@ public class Garden : MonoBehaviour
         }
 
         int index = Random.Range(0, plantInfos.Count);
-        var go = Instantiate<Plant>(_plantPrefab, position, transform.rotation, transform);
+        var go = Instantiate<Plant>(_plantPrefab, transform.position, transform.rotation, transform);
+        go.transform.localPosition = position;
         go.info = plantInfos[index];
         go.plantIndex = (int)plantInfos[index].kind;
         go.reproductionInterval = plantInfos[index].reproductionInterval;
         // point UP to center
         go.transform.up = transform.position - go.transform.position;
         go.transform.localScale = Vector3.one * plantInfos[index].baseScale;
-        go.GetComponentInChildren<SpriteRenderer>().sortingOrder = _baseSortingOrder + plantInfos[index].sortingOrderMod;
+        go.GetComponentInChildren<SpriteRenderer>().sortingOrder = baseSortingOrder + plantInfos[index].sortingOrderMod;
+        plants.Add(go);
     }
 
 
@@ -102,7 +118,7 @@ public class Garden : MonoBehaviour
             random = Random.insideUnitCircle.normalized * _plantLineRadius;
             foreach (var plant in plants)
             {
-                if (Vector3.Distance(plant.transform.position, random) < preferredMinDistance)
+                if (Vector3.Distance(plant.transform.localPosition, random) < preferredMinDistance)
                 {
                     found = false;
                     break;
@@ -120,18 +136,20 @@ public class Garden : MonoBehaviour
     /// Function for creating new plant based on complete info. Used for plant reproduction.
     public void CreatePlant(PlantInfo info)
     {
-        if (GetComponentsInChildren<Plant>().Length + 1 >= maxPlants)
+        if (plants.Count >= maxPlants)
         {
             return;
         }
         Vector3 pos = GetPlantPosition();
-        var go = Instantiate<Plant>(_plantPrefab, pos, transform.rotation, transform);
+        var go = Instantiate<Plant>(_plantPrefab, transform.position, transform.rotation, transform);
+        go.transform.localPosition = pos;
         go.info = info;
         go.plantIndex = (int)info.kind;
         go.reproductionInterval = info.reproductionInterval;
         // point UP to center
         go.transform.up = transform.position - go.transform.position;
         go.transform.localScale = Vector3.one * info.baseScale;
-        go.GetComponentInChildren<SpriteRenderer>().sortingOrder = _baseSortingOrder + info.sortingOrderMod;
+        go.GetComponentInChildren<SpriteRenderer>().sortingOrder = baseSortingOrder + info.sortingOrderMod;
+        plants.Add(go);
     }
 }

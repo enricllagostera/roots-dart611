@@ -356,8 +356,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlant: {fileID: 0}
   allPlants: []
-  actionDurationMin: 4
-  actionDurationMax: 10
+  actionDurationMin: 1
+  actionDurationMax: 5
 --- !u!1 &1143266088
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,18 +476,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96de8191b803d4449762fa5f8515ff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPlants: 60
+  maxPlants: 100
   preferredMinDistance: 1
   _plantPrefab: {fileID: 114904067301625924, guid: ad4218e988a27ba40818ce2b40dafdac,
     type: 2}
   _plantLineRadius: 20.29
   _pool: {fileID: 11400000, guid: a3a1e8419685a304f8980e502b023c69, type: 2}
   _randomizer: 0
-  _treeProbability: 0.4
+  _treeProbability: 0.7
   _flowerProbability: 0.7
   _grassProbability: 1
   _propProbability: 0
-  _initialPlantCount: 10
+  _initialPlantCount: 20
   _baseSortingOrder: 0
 --- !u!4 &1378486243
 Transform:

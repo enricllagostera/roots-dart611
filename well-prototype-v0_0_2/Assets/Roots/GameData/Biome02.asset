@@ -15,19 +15,19 @@ MonoBehaviour:
   - kind: 7
     reproductionInterval: 10
     sortingOrderMod: -2
-    baseScale: 2
+    baseScale: 12
   flowers:
   - kind: 4
     reproductionInterval: 5
     sortingOrderMod: 2
-    baseScale: 0.66
+    baseScale: 4
   grass:
   - kind: 5
     reproductionInterval: 4
     sortingOrderMod: 1
-    baseScale: 0.66
+    baseScale: 4
   - kind: 6
     reproductionInterval: 3
     sortingOrderMod: 1
-    baseScale: 0.66
+    baseScale: 4
   props: []

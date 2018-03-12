@@ -18,7 +18,9 @@ public class Bee : MonoBehaviour
     [SerializeField] private float _smoothFactor;
     private float angularSpeed;
     public Animator animator;
+    private SpriteRenderer _sprite;
     public bool isMoving;
+    public int sorting;
 
     void Start()
     {
@@ -29,10 +31,12 @@ public class Bee : MonoBehaviour
         pos.y = -_radius;
         _visual.localPosition = pos;
         animator = _visual.GetComponent<Animator>();
+        _sprite = _visual.GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
+        _sprite.sortingOrder = sorting;
         // FIX: debug code -> remove;
         if (Input.GetKeyDown(KeyCode.F))
         {
