@@ -4,7 +4,15 @@
 
 ### Enric
 
-Today I'll work on making a basic bee AI. With this addition, we might have the basic loop and most of the in-game elements ready for Thursday's presentation. I think that besides including the bee and well dynamic, I should put some work on the feedback on growth and nutrition actions.  
+Today I'll work on making a basic bee AI. With this addition, we might have the basic loop and most of the in-game elements ready for Thursday's presentation. I think that besides including the bee and well dynamic, I should put some work on the feedback on growth and nutrition actions.
+
+#### Bee AI
+
+I'm thinking that a basic behaviour could be expressed as a flowchart. This is a simple version that emphasizes randomization.
+
+![](documentation/2018-03-12/notes.jpg)
+
+When implementing it, I improved it to allow for 1) picking just plants on the same garden for logic and 2) avoid repeated behavior (never repeats the same action twice). It works quite well as a flow right now. It can be improved with some priorization (an idea: SAD -> HAPPY -> SURPRISED -> REST -> PLAY). This would entail some changes on how data and config is done for each action. Not a big issue, actually.
 
 ## 2018-03-10
 
