@@ -35,6 +35,10 @@ public class Plant : MonoBehaviour
     public Gradient tintModRange;
     private Garden _garden;
 
+    public float growthAnimationMod;
+    public float growthAnimationSpeed;
+    private float _scaleMod;
+
     void Start()
     {
         // wire-up
@@ -49,7 +53,8 @@ public class Plant : MonoBehaviour
         age = 0f;
         isAlive = true;
         visual.material.SetColor("_Color", tintModRange.Evaluate(Random.Range(0f, 1f)));
-        transform.localScale *= 1f + Random.Range(-scaleModRange / 2f, scaleModRange / 2f);
+        _scaleMod = 1f + Random.Range(-scaleModRange / 2f, scaleModRange / 2f);
+        visual.transform.localScale *= _scaleMod;
         _garden = transform.parent.GetComponent<Garden>();
     }
 
@@ -72,6 +77,12 @@ public class Plant : MonoBehaviour
         age += Time.deltaTime * ((isAlive) ? 1f : -1f);
         nutrientFX.SetBool("Active", activeNutrient);
         visual.sortingOrder = _garden.baseSortingOrder + 5;
+        if (activeGrowth)
+        {
+            visual.transform.localScale = Vector3.one * (1f + (growthAnimationMod *
+                Mathf.Sin((Time.realtimeSinceStartup + transform.position.z) * growthAnimationSpeed)));
+            visual.transform.localScale *= _scaleMod;
+        }
     }
 
     public void RandomizeInputs()

@@ -200,6 +200,8 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 4
     m_NumAlphaKeys: 2
+  growthAnimationMod: 0.03
+  growthAnimationSpeed: 20
 --- !u!212 &212201130950560466
 SpriteRenderer:
   m_ObjectHideFlags: 1
