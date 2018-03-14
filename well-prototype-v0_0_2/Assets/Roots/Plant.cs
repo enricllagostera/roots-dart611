@@ -17,9 +17,9 @@ public class Plant : MonoBehaviour
     public float growthDecay;
     public float healthDecay;
     //FX
-    private ParticleFX nutrientFX;
-    private ParticleFX reproduceFX;
-    private SpriteRenderer _visual;
+    private Animator nutrientFX;
+    // private Animator reproduceFX;
+    public SpriteRenderer visual;
     public float baseSpeed;
 
     public bool activeGrowth;
@@ -34,9 +34,8 @@ public class Plant : MonoBehaviour
     void Start()
     {
         // wire-up
-        //nutrientFX = transform.Find("Nutrient").GetComponentInChildren<ParticleFX>();
+        nutrientFX = transform.Find("NutrientFX").GetComponent<Animator>();
         //reproduceFX = transform.Find("Reproduce").GetComponentInChildren<ParticleFX>();
-        _visual = GetComponentInChildren<SpriteRenderer>();
         // gameplay init
         health = 0f;
         growth = 0f;
@@ -64,6 +63,7 @@ public class Plant : MonoBehaviour
         activeGrowth = Input.GetKey(this.growthKey);
         activeNutrient = Input.GetKey(this.nutrientKey);
         age += Time.deltaTime * ((isAlive) ? 1f : -1f);
+        nutrientFX.SetBool("Active", activeNutrient);
     }
 
     public void RandomizeInputs()
