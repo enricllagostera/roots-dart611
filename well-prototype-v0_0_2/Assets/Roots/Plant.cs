@@ -31,6 +31,9 @@ public class Plant : MonoBehaviour
     public float age;
     public bool isAlive;
 
+    public float scaleModRange;
+    public Gradient tintModRange;
+
     void Start()
     {
         // wire-up
@@ -44,6 +47,8 @@ public class Plant : MonoBehaviour
         reproductionTimer = reproductionInterval;
         age = 0f;
         isAlive = true;
+        visual.material.SetColor("_Color", tintModRange.Evaluate(Random.Range(0f, 1f)));
+        transform.localScale *= 1f + Random.Range(-scaleModRange / 2f, scaleModRange / 2f);
     }
 
 

@@ -8,6 +8,7 @@ Shader "Shaders 102/Animated Displacement"
 		_DisplaceTex("Displacement Texture", 2D) = "white" {}
 		_Magnitude("Magnitude", Range(0,0.1)) = 1
 		_Speed("Speed", Range(0,50)) = 5
+		_Color ("Tint", Color) = (1,1,1,1)
 	}
 	SubShader
 	{
@@ -60,6 +61,7 @@ Shader "Shaders 102/Animated Displacement"
 			sampler2D _DisplaceTex;
 			float _Magnitude;
 			float _Speed;
+			fixed4 _Color;
 
 			float4 frag (v2f i) : SV_Target
 			{
@@ -69,7 +71,7 @@ Shader "Shaders 102/Animated Displacement"
 				float y = disp.y;
 				disp = ((disp * 2) - 1) * _Magnitude;
 				//disp.y = y;
-				float4 col = tex2D(_MainTex, i.uv + disp);
+				float4 col = tex2D(_MainTex, i.uv + disp) * _Color;
 				return col;
 			}
 			ENDCG
