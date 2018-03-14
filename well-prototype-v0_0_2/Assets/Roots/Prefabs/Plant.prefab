@@ -200,8 +200,8 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 4
     m_NumAlphaKeys: 2
-  growthAnimationMod: 0.03
-  growthAnimationSpeed: 20
+  growthAnimationMod: 0.01
+  growthAnimationSpeed: 2.5
 --- !u!212 &212201130950560466
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -260,7 +260,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a343578c67a11ab489aa4fe303090d91, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
