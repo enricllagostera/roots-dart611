@@ -120,6 +120,6 @@ public class Plant : MonoBehaviour
 
     public void Reproduce()
     {
-        transform.parent.GetComponent<Garden>().CreatePlant(info);
+        transform.parent.GetComponent<Garden>().CreateNewPlant();
     }
 }

@@ -1,5 +1,13 @@
 # Project Logs
 
+## 2018-03-14
+
+### Enric
+
+Today we are doing some co-working to improve the visual feedback of the different gameplay elements, as well as defining how biomes will work in game. I structured them to make them work with the Pool system for prefabs and to make it as easy as possible to shift between the biomes gradually. It works kinda well for now, but we still need to add some more interactivity and the depletion and humidity factors in the whole interaction. We also added clouds that can be controlled with a single float, which will help a lot when making them interact with players. 
+
+![](documentation/2018-03-14/biomes-smaller-2.gif)
+
 ## 2018-03-12
 
 ### Enric

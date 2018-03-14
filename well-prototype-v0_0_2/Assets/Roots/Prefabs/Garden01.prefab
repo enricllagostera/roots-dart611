@@ -249,9 +249,14 @@ MonoBehaviour:
   _flowerProbability: 0.4
   _grassProbability: 1
   _propProbability: 0
-  _initialPlantCount: 10
+  _initialPlantCount: 3
   baseSortingOrder: 0
   plants: []
+  biome:
+    fertility: 0
+    humidity: 0
+    plantCount: 0
+    garden: {fileID: 0}
 --- !u!114 &114509061749959668
 MonoBehaviour:
   m_ObjectHideFlags: 1

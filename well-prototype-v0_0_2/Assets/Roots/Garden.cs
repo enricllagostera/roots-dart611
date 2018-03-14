@@ -9,63 +9,33 @@ public class Garden : MonoBehaviour
     public float preferredMinDistance;
     [SerializeField] private Plant _plantPrefab;
     [SerializeField] private float _plantLineRadius;
-    [SerializeField] private PoolConfig _pool;
-    [SerializeField] private bool _randomizer;
-    [SerializeField] private float _treeProbability;
-    [SerializeField] private float _flowerProbability;
-    [SerializeField] private float _grassProbability;
-    [SerializeField] private float _propProbability;
     [SerializeField] private int _initialPlantCount;
     [SerializeField] public int baseSortingOrder;
     private Fog _fog;
     private Bee _bee;
     private CloudsFX _cloudsFX;
     public List<Plant> plants;
+    public Biome biome;
 
     void Start()
     {
         _fog = GetComponentInChildren<Fog>();
         _bee = GetComponentInChildren<Bee>();
         _cloudsFX = GetComponentInChildren<CloudsFX>();
+        biome.garden = this;
         plants = new List<Plant>();
-        // totally random probabilities for testing
-        if (_randomizer)
-        {
-            _treeProbability = Random.Range(0.1f, 0.9f);
-            _flowerProbability = Random.Range(0.1f, 0.9f);
-            _grassProbability = Random.Range(0.1f, 0.9f);
-            _propProbability = Random.Range(0.1f, 0.9f);
-        }
 
-        for (int i = 0; i < _initialPlantCount; i++)
+        while (plants.Count < _initialPlantCount)
         {
             Vector3 random = GetPlantPosition();
-
-            // tree spawning
-            float roll = Random.value;
-            if (roll <= _treeProbability)
+            var pick = BiomeManager.Instance.PickPlant(biome);
+            if (pick != null)
             {
-                SpawnFrom(_pool.trees, random);
-                continue;
-            }
-
-            // grasses spawning
-            roll = Random.value;
-            if (roll <= _grassProbability)
-            {
-                SpawnFrom(_pool.grass, random);
-                continue;
-            }
-
-            // prop spawning
-            roll = Random.value;
-            if (roll <= _propProbability)
-            {
-                SpawnFrom(_pool.props, random);
-                continue;
+                SpawnFrom(pick, random);
             }
         }
     }
+
 
 
     void LateUpdate()
@@ -76,6 +46,10 @@ public class Garden : MonoBehaviour
         transform.Find("Ground").GetComponent<SpriteRenderer>().sortingOrder = baseSortingOrder - 200;
         foreach (var plant in plants)
         {
+            if (plant == null)
+            {
+                continue;
+            }
             plant.GetComponentInChildren<SpriteRenderer>().sortingOrder = baseSortingOrder + plant.info.sortingOrderMod;
         }
     }
@@ -109,6 +83,20 @@ public class Garden : MonoBehaviour
         plants.Add(go);
     }
 
+    void SpawnFrom(PlantInfo plant, Vector3 position)
+    {
+        var go = Instantiate<Plant>(_plantPrefab, transform.position, transform.rotation, transform);
+        go.transform.localPosition = position;
+        go.info = plant;
+        go.plantIndex = (int)plant.kind;
+        go.reproductionInterval = plant.reproductionInterval;
+        // point UP to center
+        go.transform.up = transform.position - go.transform.position;
+        go.transform.localScale = Vector3.one * plant.baseScale;
+        go.GetComponentInChildren<SpriteRenderer>().sortingOrder = baseSortingOrder + plant.sortingOrderMod;
+        plants.Add(go);
+    }
+
 
     Vector3 GetPlantPosition()
     {
@@ -137,22 +125,17 @@ public class Garden : MonoBehaviour
 
 
     /// Function for creating new plant based on complete info. Used for plant reproduction.
-    public void CreatePlant(PlantInfo info)
+    public void CreateNewPlant()
     {
-        if (plants.Count >= maxPlants)
+        if (plants.Count < maxPlants)
         {
-            return;
+            Vector3 random = GetPlantPosition();
+            var pick = BiomeManager.Instance.PickPlant(biome);
+            while (pick == null)
+            {
+                pick = BiomeManager.Instance.PickPlant(biome);
+            }
+            SpawnFrom(pick, random);
         }
-        Vector3 pos = GetPlantPosition();
-        var go = Instantiate<Plant>(_plantPrefab, transform.position, transform.rotation, transform);
-        go.transform.localPosition = pos;
-        go.info = info;
-        go.plantIndex = (int)info.kind;
-        go.reproductionInterval = info.reproductionInterval;
-        // point UP to center
-        go.transform.up = transform.position - go.transform.position;
-        go.transform.localScale = Vector3.one * info.baseScale;
-        go.GetComponentInChildren<SpriteRenderer>().sortingOrder = baseSortingOrder + info.sortingOrderMod;
-        plants.Add(go);
     }
 }

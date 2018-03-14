@@ -1,0 +1,834 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 8
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 11
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_TemporalCoherenceThreshold: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 9
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 0
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 500
+    m_PVRBounces: 2
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVRFilteringMode: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
+  m_LightingDataAsset: {fileID: 0}
+  m_UseShadowmask: 1
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1001 &875513
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 317841036}
+    m_Modifications:
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430615223700740, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_Name
+      value: Garden01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: biome.fertility
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: biome.humidity
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &875514 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+    type: 2}
+  m_PrefabInternal: {fileID: 875513}
+--- !u!1 &317841034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 317841036}
+  - component: {fileID: 317841035}
+  m_Layer: 0
+  m_Name: Well
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &317841035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 317841034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f3ff9f70699394182892d95b492450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: -1
+      outSlope: -1
+      tangentMode: 34
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: -1
+      outSlope: -1
+      tangentMode: 34
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  layerOffset: 0
+  gradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  gardenLayers:
+  - {fileID: 1378486242}
+  loopTime: 200
+  timer: 0
+  timeScale: 1
+  activeLayerMin: 0.5
+  activeLayerMax: 0.9
+  wellDepth: 600
+--- !u!4 &317841036
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 317841034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1378486243}
+  - {fileID: 875514}
+  - {fileID: 880031533}
+  - {fileID: 1407478106}
+  - {fileID: 614285011}
+  - {fileID: 577951725}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &577951724
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 317841036}
+    m_Modifications:
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430615223700740, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_Name
+      value: Garden01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: biome.fertility
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: biome.humidity
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &577951725 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+    type: 2}
+  m_PrefabInternal: {fileID: 577951724}
+--- !u!1001 &614285010
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 317841036}
+    m_Modifications:
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430615223700740, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_Name
+      value: Garden01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: biome.fertility
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: biome.humidity
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &614285011 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+    type: 2}
+  m_PrefabInternal: {fileID: 614285010}
+--- !u!1 &752079326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 752079330}
+  - component: {fileID: 752079329}
+  - component: {fileID: 752079328}
+  - component: {fileID: 752079327}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &752079327
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 752079326}
+  m_Enabled: 1
+--- !u!124 &752079328
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 752079326}
+  m_Enabled: 1
+--- !u!20 &752079329
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 752079326}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.29346883, g: 0.040765557, b: 0.42647058, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 27
+  orthographic: 0
+  orthographic size: 21
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &752079330
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 752079326}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &880031532
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 317841036}
+    m_Modifications:
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430615223700740, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_Name
+      value: Garden01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: biome.fertility
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: biome.humidity
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &880031533 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+    type: 2}
+  m_PrefabInternal: {fileID: 880031532}
+--- !u!114 &1378486242 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2146605402}
+  m_Script: {fileID: 11500000, guid: e96de8191b803d4449762fa5f8515ff2, type: 3}
+--- !u!4 &1378486243 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2146605402}
+--- !u!1001 &1407478105
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 317841036}
+    m_Modifications:
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430615223700740, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_Name
+      value: Garden01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: biome.fertility
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: biome.humidity
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1407478106 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1407478105}
+--- !u!1 &1967714529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1967714530}
+  - component: {fileID: 1967714531}
+  m_Layer: 0
+  m_Name: BiomeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1967714530
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1967714529}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1967714531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1967714529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b99197b7cec03934a857e15a3d1d986d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomesDB:
+  - name: savannah
+    treeProbability: 0.3
+    grassProbability: 0.8
+    flowerProbability: 0.8
+    humidityProbabilityMod:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0.9
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+    fertilityProbabilityMod:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+    plantData: {fileID: 11400000, guid: 59eeae6e6b404014cb1ca70989aab35f, type: 2}
+  - name: tropical
+    treeProbability: 0.8
+    grassProbability: 0.8
+    flowerProbability: 0.8
+    humidityProbabilityMod:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    fertilityProbabilityMod:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    plantData: {fileID: 11400000, guid: a3a1e8419685a304f8980e502b023c69, type: 2}
+  - name: conifer
+    treeProbability: 0.8
+    grassProbability: 0.8
+    flowerProbability: 0.8
+    humidityProbabilityMod:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0.00000846386
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.5
+        value: 0.80041564
+        inSlope: -0.000012639703
+        outSlope: -0.000012639703
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.98999995
+        value: 0.00000011920929
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    fertilityProbabilityMod:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 0.5
+        value: 0.8004114
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1
+        value: 0.0041152257
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+    plantData: {fileID: 11400000, guid: 3d8747e85bd14a542aa1deb6ba4747bf, type: 2}
+  biomes: []
+  gardens: []
+--- !u!1001 &2146605402
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 317841036}
+    m_Modifications:
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+  m_IsPrefabParent: 0
