@@ -19,12 +19,14 @@ public class Garden : MonoBehaviour
     [SerializeField] public int baseSortingOrder;
     private Fog _fog;
     private Bee _bee;
+    private CloudsFX _cloudsFX;
     public List<Plant> plants;
 
     void Start()
     {
         _fog = GetComponentInChildren<Fog>();
         _bee = GetComponentInChildren<Bee>();
+        _cloudsFX = GetComponentInChildren<CloudsFX>();
         plants = new List<Plant>();
         // totally random probabilities for testing
         if (_randomizer)
@@ -70,6 +72,7 @@ public class Garden : MonoBehaviour
     {
         _fog.UpdateColor(progress, baseSortingOrder + 20);
         _bee.sorting = baseSortingOrder + 10;
+        _cloudsFX.sorting = baseSortingOrder + 17;
         transform.Find("Ground").GetComponent<SpriteRenderer>().sortingOrder = baseSortingOrder - 200;
         foreach (var plant in plants)
         {
