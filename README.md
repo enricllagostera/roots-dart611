@@ -12,6 +12,10 @@ While talking with Rebecca about references, I went looking for more games on Sh
 - [Viridi](http://store.steampowered.com/app/375950/Viridi/): similar idea of garden and care and open-ended gameplay. Does not uses altctrls.
 - [We are fine](http://wearefine.ca/): the game has a key emphasis on touch and listening. Our game would like to provide a reflective mood too, but without verbal stories.
 
+Another thing! I was talking with TOny about Shoal, the game he made for CriticalHit15. While discussing it, we thought of how a cilindrical frame could work for our game. Based on that I thought of barrels and wood spools as possibilities for the game structure. Here is a reference image. There are used plastic drums for 20$, but also we could try to find some for recycling. Another option would be to build something similar from scratch.
+
+![](documentation/2018-03-20/cilindrical-frames.png)
+
 ## 2018-03-14
 
 ### Enric
