@@ -654,7 +654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   biomesDB:
   - name: savannah
-    treeProbability: 0.3
+    treeProbability: 0.1
     grassProbability: 0.8
     flowerProbability: 0.8
     humidityProbabilityMod:
@@ -695,7 +695,7 @@ MonoBehaviour:
       m_RotationOrder: 0
     plantData: {fileID: 11400000, guid: 59eeae6e6b404014cb1ca70989aab35f, type: 2}
   - name: tropical
-    treeProbability: 0.8
+    treeProbability: 0.4
     grassProbability: 0.8
     flowerProbability: 0.8
     humidityProbabilityMod:
@@ -736,7 +736,7 @@ MonoBehaviour:
       m_RotationOrder: 0
     plantData: {fileID: 11400000, guid: a3a1e8419685a304f8980e502b023c69, type: 2}
   - name: conifer
-    treeProbability: 0.8
+    treeProbability: 0.6
     grassProbability: 0.8
     flowerProbability: 0.8
     humidityProbabilityMod:

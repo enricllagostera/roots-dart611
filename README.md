@@ -1,10 +1,22 @@
 # Project Logs
 
+## 2018-03-20
+
+### Enric
+
+While talking with Rebecca about references, I went looking for more games on Shake That Button](http://shakethatbutton.com/) for some alternative controllers that were related with our project. I found a few and I think it's good to list them here.
+
+- [Shoal](http://shakethatbutton.com/shoal/): similar in mechanics, visual solutions and goals, but ours has a stronger emphasis on materials and touch.
+- [Ferdinand Laboite](http://shakethatbutton.com/ferdinand-laboite/): uses the "hidden in a box" idea and has a similar emphasis on materiality as our project, but it's focused on providing a clumsy and hectic game experience.
+- [Proteus](https://en.wikipedia.org/wiki/Proteus_(video_game)): it's a game with a traditional controller, but the art style and atmosphere are very inspiring for us.
+- [Viridi](http://store.steampowered.com/app/375950/Viridi/): similar idea of garden and care and open-ended gameplay. Does not uses altctrls.
+- [We are fine](http://wearefine.ca/): the game has a key emphasis on touch and listening. Our game would like to provide a reflective mood too, but without verbal stories.
+
 ## 2018-03-14
 
 ### Enric
 
-Today we are doing some co-working to improve the visual feedback of the different gameplay elements, as well as defining how biomes will work in game. I structured them to make them work with the Pool system for prefabs and to make it as easy as possible to shift between the biomes gradually. It works kinda well for now, but we still need to add some more interactivity and the depletion and humidity factors in the whole interaction. We also added clouds that can be controlled with a single float, which will help a lot when making them interact with players. 
+Today we are doing some co-working to improve the visual feedback of the different gameplay elements, as well as defining how biomes will work in game. I structured them to make them work with the Pool system for prefabs and to make it as easy as possible to shift between the biomes gradually. It works kinda well for now, but we still need to add some more interactivity and the depletion and humidity factors in the whole interaction. We also added clouds that can be controlled with a single float, which will help a lot when making them interact with players.
 
 ![](documentation/2018-03-14/biomes-smaller-2.gif)
 
