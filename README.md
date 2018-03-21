@@ -1,5 +1,15 @@
 # Project Logs
 
+## 2018-03-21
+
+### Enric
+
+Another interesting reference: the [#carewave manifesto](http://carewave.games/manifesto/). The definition of care they put forward is very relevant to what I think of our game's goals:
+
+> Care is a consensual exchange that brings all parties towards mindfulness, empathy, and understanding; inspiration and action; strength and connection; purpose and insight; safety, rejuvenation and healing; and joy, peace, and agency. (3-A)
+
+The whole document is very good and I believe our game dialogues with that very much.
+
 ## 2018-03-20
 
 ### Enric
