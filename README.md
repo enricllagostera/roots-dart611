@@ -1,5 +1,18 @@
 # Project Logs
 
+## 2018-03-22
+
+### Enric
+
+Ok, so after the class today, I visited the wood workshop. Got their schedule and also time info to try and book a spot for building the frame and structure for the controller.
+
+I did some sketches in paper and on 3D modelling. Here is how the current version looks like:
+
+![](documentation/2018-03-22/structure-views.png)
+
+The top shelf is 100mm away from the board that supports the screen. The top shelf will hold the laptop and the electronic board (a MakeyMakey), and roots will be fixed here. The bottom shelf will have adjustable height, to accommodate different player needs and settings, and it has the purpose of being the "ground" where the roots are connected. The whole controller structure will be covered with fabric, with cuts so that players can reach through to the roots. I think this is looking interesting.
+
+
 ## 2018-03-21
 
 ### Enric
@@ -9,6 +22,12 @@ Another interesting reference: the [#carewave manifesto](http://carewave.games/m
 > Care is a consensual exchange that brings all parties towards mindfulness, empathy, and understanding; inspiration and action; strength and connection; purpose and insight; safety, rejuvenation and healing; and joy, peace, and agency. (3-A)
 
 The whole document is very good and I believe our game dialogues with that very much.
+
+Another reference that sprung up is [this text by ElectronDance on Japanese "secret boxes"](http://www.electrondance.com/screw-your-walking-simulators/) and their relationship to trial-and-error. This is an important element to be thought of in or game: I don't think we rely too much on this dynamic, but maybe we should? I really like the unveiling of secrets as an experience. Here is the author's definition of the term:
+
+> A secret box is a game which is built around some form of content and challenge is trivial or absent. The emphasis is on conveying moments or ideas to the player rather than testing the player's abilities.
+
+In other news, we got a screen (here are its [specs](https://www.cnet.com/products/lg-l1718s-lcd-monitor-17/specs/))! I found its [disassembly manual](https://www.manualslib.com/manual/701608/Lg-Flatron-L1718s.html?page=8), so we can dismount it and make it smaller for our building purposes. It has 17" and a 1280x1024 resolution, so we can optimize the digital game for that. In terms of size, it's a bit small, so it might be a good idea to make the whole game more of a tabletop object.
 
 ## 2018-03-20
 
