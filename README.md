@@ -1,5 +1,33 @@
 # Project Logs
 
+## 2018-03-23
+
+### Enric & Rebecca
+
+We worked some time today on discussing the build of the controller and its supporting structure. Here are some loose notes from today's working session.
+
+#### The cover / stuffing
+
+We are thinking about making a large fabric cover with a hole in the center for the screen with a duvet-like stuffing near that hole (forming the well border).
+
+The voleme between the monitor, the support board would be filled with foam or other soft materials.
+
+The cover can be embroidered with different materials and patterns to create a more patchwork kind of aesthetic that would hopefully invite players to touch and interact with the controller.
+
+####  Roots
+
+Make them so they are long and can reach any spot on the bottom shelf and also in a way that we can stuff it
+
+Discussed ways to connect them to the electronics shelf. The idea is to use staples for holding the fabric and take most of the mechanical stress of players tugging the roots. The conductive thread would be connected via a terminal block as intermediary, with hot glue to help hold it in place.
+
+We are experimenting with different ways of sewing the roots in order to keep the conductive thread protected from tugging and also create a good compartment to put stuffing.
+
+We are scheduling a learning session with Marc about the sewing machine on the Maker Lab.
+
+#### Structure
+
+We'll visit the woodshop for the open consultation period Monday morning, to see what can we do and how. Also, we'll try to make an appointment for a working session soon if that's possible.
+
 ## 2018-03-22
 
 ### Enric
