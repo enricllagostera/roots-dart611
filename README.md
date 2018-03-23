@@ -10,7 +10,9 @@ We worked some time today on discussing the build of the controller and its supp
 
 We are thinking about making a large fabric cover with a hole in the center for the screen with a duvet-like stuffing near that hole (forming the well border).
 
-The voleme between the monitor, the support board would be filled with foam or other soft materials.
+The volume between the monitor, the support board would be filled with foam or other soft materials.
+
+![](https://i.imgur.com/qDoPFad.jpg)
 
 The cover can be embroidered with different materials and patterns to create a more patchwork kind of aesthetic that would hopefully invite players to touch and interact with the controller.
 
