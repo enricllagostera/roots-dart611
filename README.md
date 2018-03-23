@@ -24,6 +24,8 @@ Discussed ways to connect them to the electronics shelf. The idea is to use stap
 
 We are experimenting with different ways of sewing the roots in order to keep the conductive thread protected from tugging and also create a good compartment to put stuffing.
 
+![](https://i.imgur.com/LpnXaui.jpg)
+
 We are scheduling a learning session with Marc about the sewing machine on the Maker Lab.
 
 #### Structure
