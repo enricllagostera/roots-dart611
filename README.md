@@ -10,9 +10,7 @@ About the stuffing cover: we thought of pool needles attached to the edge of the
 
 ![](documentation/2018-03-26/well_cover.jpg)
 
-We also discussed about patterning the wall fabric of the well with a quilted brick pattern, similar to this one below, but in larger size for each brick.
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/iECXconznF8?list=PLNkZhEjxH0nIsR4-uV6H-pQbMziUejO__" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+We also discussed about patterning the wall fabric of the well with a quilted brick pattern, similar to this one [on this link](https://www.youtube.com/embed/iECXconznF8?list=PLNkZhEjxH0nIsR4-uV6H-pQbMziUejO__), but in larger size for each brick.
 
 We also managed to take apart the monitor stand, so now it can more easily stand flat on surface.
 
