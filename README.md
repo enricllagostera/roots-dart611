@@ -1,5 +1,21 @@
 # Project Logs
 
+## 2018-03-26
+
+### Enric & Rebecca
+
+We went to the woodshop for consultation and made some decision wrt the joining of the frame and shelves (we will use l-brackets) and using a round top board to attach the monitor with VESA screws (M4 threads, 7.4mm depth in the monitor).
+
+About the stuffing cover: we thought of pool needles attached to the edge of the board, to protect from it and also to help shape it. The cover from the board edge to the screen hole would be held together by draw strings and fabric, according to the diagram below. This would make it easier to open and close and it would give a good hold to the fabric.
+
+![](documentation/2018-03-26/well_cover.jpg)
+
+We also discussed about patterning the wall fabric of the well with a quilted brick pattern, similar to this one below, but in larger size for each brick.
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/iECXconznF8?list=PLNkZhEjxH0nIsR4-uV6H-pQbMziUejO__" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+We also managed to take apart the monitor stand, so now it can more easily stand flat on surface.
+
 ## 2018-03-23
 
 ### Enric & Rebecca
