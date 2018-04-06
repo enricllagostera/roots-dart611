@@ -3,6 +3,14 @@
 ## 2018-04-03
 
 ### Enric & Rebecca
+These are photos from our building session on Wednesday. Today, we picked up the fabric materials that we will need to finish the project (not shown yet!). We tried to pick these in a way that each "root" will be discernable by touch, while interaction sets are further explained to players by the visual feedback.
+
+![](https://i.imgur.com/fLWZDzM.jpg)
+![](https://i.imgur.com/qq4AZcR.jpg)
+
+## 2018-04-03
+
+### Enric & Rebecca
 
 On Thursday of last week we went into the shop and made the top part of the well, and will be making the rest of the structure (hopefully!) tomorrow; 
 ![](https://i.imgur.com/mnSSJiS.jpg)
