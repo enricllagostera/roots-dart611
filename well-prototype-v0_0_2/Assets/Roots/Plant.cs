@@ -16,7 +16,9 @@ public class Plant : MonoBehaviour
     public float healthSpeed;
     public float growthDecay;
     public float healthDecay;
+    public EPlantState state;
     //FX
+    private Animator _animator;
     private Animator nutrientFX;
     // private Animator reproduceFX;
     public SpriteRenderer visual;
@@ -29,7 +31,7 @@ public class Plant : MonoBehaviour
     public float reproductionInterval;
 
     public float age;
-    public bool isAlive;
+
 
     public float scaleModRange;
     public Gradient tintModRange;
@@ -50,8 +52,6 @@ public class Plant : MonoBehaviour
         baseSpeed = 0.1f;
         // plant index
         reproductionTimer = reproductionInterval;
-        age = 0f;
-        isAlive = true;
         visual.material.SetColor("_Color", tintModRange.Evaluate(Random.Range(0f, 1f)));
         _scaleMod = 1f + Random.Range(-scaleModRange / 2f, scaleModRange / 2f);
         visual.transform.localScale *= _scaleMod;
@@ -61,27 +61,23 @@ public class Plant : MonoBehaviour
 
     void Update()
     {
-        /* 
-        _animator.speed = 0;
-        // calculate all decays
-        // get all inputs
-        bool nutrientsInput = Input.GetKey(nutrientKey);
-        bool growthInput = Input.GetKey(this.growthKey);
-        bool reproduceInput = Input.GetKey(reproduceKey);
-        // nutrient action feedback
-        //nutrientFX.Run(nutrientsInput, _visual.sortingOrder);
-        */
-        //reproduceFX.Run(reproduceInput, _visual.sortingOrder);
         activeGrowth = Input.GetKey(this.growthKey);
         activeNutrient = Input.GetKey(this.nutrientKey);
-        age += Time.deltaTime * ((isAlive) ? 1f : -1f);
-        nutrientFX.SetBool("Active", activeNutrient);
-        visual.sortingOrder = _garden.baseSortingOrder + 5;
-        if (activeGrowth)
+        // age += Time.deltaTime * ((isAlive) ? 1f : -1f);
+        if (state == EPlantState.SEEDLING || state == EPlantState.NORMAL)
         {
-            visual.transform.localScale = Vector3.one * (1f + (growthAnimationMod *
-                Mathf.Sin((Time.realtimeSinceStartup + transform.position.z) * growthAnimationSpeed)));
-            visual.transform.localScale *= _scaleMod;
+            nutrientFX.SetBool("Active", activeNutrient);
+            if (activeGrowth)
+            {
+                visual.sortingOrder = _garden.baseSortingOrder + 5;
+                visual.transform.localScale = Vector3.one * (1f + (growthAnimationMod *
+                    Mathf.Sin((Time.realtimeSinceStartup + transform.position.z) * growthAnimationSpeed)));
+                visual.transform.localScale *= _scaleMod;
+            }
+        }
+        else
+        {
+            nutrientFX.SetBool("Active", false);
         }
     }
 
@@ -120,6 +116,36 @@ public class Plant : MonoBehaviour
 
     public void Reproduce()
     {
-        transform.parent.GetComponent<Garden>().CreateNewPlant();
+        transform.parent.GetComponent<Garden>().ResetPlant();
+    }
+
+    public void MakeInert()
+    {
+        // #todo change animation
+        age = 0;
+        health = 0;
+        growth = 0;
+        state = EPlantState.INERT;
+    }
+
+    public void MakeDead()
+    {
+        if (state != EPlantState.DEAD)
+        {
+            // #todo change animation
+            state = EPlantState.DEAD;
+            age *= -1f;
+        }
+    }
+
+    public void MakeSeed()
+    {
+        if (state != EPlantState.SEEDLING)
+        {
+            age = 0;
+            health = 0;
+            growth = 0;
+            state = EPlantState.SEEDLING;
+        }
     }
 }

@@ -23,3 +23,11 @@ public enum EBeehavior
     SAD,
     HAPPY
 }
+
+public enum EPlantState
+{
+    INERT,
+    SEEDLING,
+    NORMAL,
+    DEAD
+}

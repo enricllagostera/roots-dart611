@@ -70,7 +70,7 @@ public class BeeAI : MonoBehaviour
                 return false;
 
             case EBeehavior.SAD:
-                var deadPlants = allPlants.Where(p => p.isAlive == false).ToList();
+                var deadPlants = allPlants.Where(p => p.state == EPlantState.DEAD).ToList();
                 if (deadPlants.Count > 0)
                 {
                     targetPlant = deadPlants[Random.Range(0, deadPlants.Count)];

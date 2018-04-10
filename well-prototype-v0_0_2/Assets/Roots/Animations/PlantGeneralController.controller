@@ -63,6 +63,17 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!114 &114289864992922062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba18ffa4c708f2c41b42d514176c982c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114429103871675284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -72,6 +83,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e3c13e6b9026de4aa0ce16905a56497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plant: {fileID: 0}
+--- !u!114 &114703818019394716
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72301c261940da349b4236b322095b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 0}
@@ -607,6 +630,32 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &1102202117597932468
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: inertBT
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours:
+  - {fileID: 114703818019394716}
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 925d387b190f1e246bcb1de7a2f11528, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &1102421577378143254
 AnimatorState:
   serializedVersion: 5
@@ -720,16 +769,19 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102838714956024754}
-    m_Position: {x: 240, y: 348, z: 0}
+    m_Position: {x: 240, y: 468, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102421577378143254}
-    m_Position: {x: 0, y: 288, z: 0}
+    m_Position: {x: 240, y: 348, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102499109126673902}
-    m_Position: {x: 0, y: 348, z: 0}
+    m_Position: {x: 240, y: 408, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102876296445467410}
     m_Position: {x: 240, y: 288, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 1102202117597932468}
+    m_Position: {x: 0, y: 288, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -739,4 +791,4 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 0, y: 240, z: 0}
   m_ExitPosition: {x: 240, y: 240, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 1102421577378143254}
+  m_DefaultState: {fileID: 1102202117597932468}

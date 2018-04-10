@@ -6,6 +6,13 @@ public class GrowthState : PlantStateBehaviour
 {
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        // hard reset to inert
+        if (plant.state == EPlantState.INERT)
+        {
+            animator.Play("inertBT", 0, 0);
+            return;
+        }
+
         animator.SetFloat("PlantSwitch", plant.plantIndex / 11f);
         // apply decay
         plant.health -= Time.deltaTime * plant.healthDecay;

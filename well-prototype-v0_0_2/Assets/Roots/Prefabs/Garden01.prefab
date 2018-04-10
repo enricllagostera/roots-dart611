@@ -238,22 +238,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progress: 0
-  maxPlants: 50
+  plantCapacity: 60
+  startSeedlingCount: 10
   preferredMinDistance: 1
   _plantPrefab: {fileID: 114904067301625924, guid: ad4218e988a27ba40818ce2b40dafdac,
     type: 2}
   _plantLineRadius: 30
-  _pool: {fileID: 11400000, guid: a3a1e8419685a304f8980e502b023c69, type: 2}
-  _randomizer: 0
-  _treeProbability: 0.7
-  _flowerProbability: 0.4
-  _grassProbability: 1
-  _propProbability: 0
-  _initialPlantCount: 3
   baseSortingOrder: 0
   plants: []
   biome:
-    fertility: 0
     humidity: 0
     plantCount: 0
     garden: {fileID: 0}

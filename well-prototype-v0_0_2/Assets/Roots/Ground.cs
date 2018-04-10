@@ -13,4 +13,9 @@ public class Ground : MonoBehaviour
         _sprite = GetComponent<SpriteRenderer>();
         _sprite.sprite = allSprites[Random.Range(0, allSprites.Length)];
     }
+
+    public void SetSortingOrder(int newOrder)
+    {
+        _sprite.sortingOrder = newOrder;
+    }
 }

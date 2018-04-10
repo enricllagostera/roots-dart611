@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WiltState : PlantStateBehaviour
 {
+    private float deathTimer;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
@@ -13,10 +14,24 @@ public class WiltState : PlantStateBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (plant.age <= 0f)
+        // hard reset to inert
+        if (plant.state == EPlantState.INERT)
         {
+            animator.Play("inertBT", 0, 0);
             return;
         }
+
+        // normal plant death due to decay
+        if (plant.state == EPlantState.DEAD)
+        {
+            deathTimer -= Time.deltaTime;
+            if (deathTimer <= 0)
+            {
+                animator.Play("inertBT", 0, 0);
+            }
+            return;
+        }
+
         animator.SetFloat("PlantSwitch", plant.plantIndex / 11f);
         if (plant.activeNutrient)
         {
@@ -38,9 +53,8 @@ public class WiltState : PlantStateBehaviour
         plant.growth = plant.health;
         if (plant.health <= 0f)
         {
-            Destroy(animator.transform.parent.gameObject, 60f);
-            plant.isAlive = false;
-            plant.age *= -1f;
+            plant.MakeDead();
+            deathTimer = plant.info.deathTimer;
             return;
         }
         else

@@ -32,11 +32,21 @@ public class Well : MonoBehaviour
     void Update()
     {
         Time.timeScale = timeScale;
-        float progress = (Time.time % loopTime).Map(0, loopTime, 0, 1);
+        float progress = (Time.time % loopTime).Map(0, loopTime, 0, 1f);
         for (int i = 0; i < gardenLayers.Length; i++)
         {
             float layerProgress = (progress + (layerOffset * i)) % 1f;
             gardenLayers[i].progress = layerProgress;
+            if (layerProgress <= 0.1f)
+            {
+                gardenLayers[i].resetLock = false;
+            }
+            if (layerProgress >= 0.99f && !gardenLayers[i].resetLock)
+            {
+                gardenLayers[i].resetLock = true;
+                gardenLayers[i].Reset();
+            }
+
             gardenLayers[i].transform.position = new Vector3(0, 0, movementCurve.Evaluate(layerProgress) * wellDepth);
             // gardenLayers[i].visual.color = gradient.Evaluate(layerProgress);
             gardenLayers[i].baseSortingOrder = (int)(gardenLayers[i].transform.position.z * -20f);

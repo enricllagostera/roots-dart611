@@ -6,4 +6,6 @@ public class PlantInfo
     public int sortingOrderMod;
     public float baseScale;
 
+    public float deathTimer;
+
 }

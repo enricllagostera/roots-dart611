@@ -255,7 +255,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   gardenLayers:
   - {fileID: 1378486242}
-  loopTime: 60
+  loopTime: 20
   timer: 0
   timeScale: 1
   activeLayerMin: 0.1
@@ -782,16 +782,6 @@ Prefab:
     - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
-        type: 2}
-      propertyPath: maxPlants
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
-        type: 2}
-      propertyPath: plantCapacity
-      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
