@@ -1,5 +1,11 @@
 # Project Logs
 
+## 2018-04-10
+
+### Enric
+
+Today I'm doing some more work on the digital part of the game. Now that we have the physical controller almost done and mostly functional, it's time to make improvements on feedback and general flow of the game.
+
 ## 2018-04-03
 
 ### Enric & Rebecca
@@ -8,12 +14,15 @@ These are photos from our building session on Wednesday. Today, we picked up the
 ![](https://i.imgur.com/fLWZDzM.jpg)
 ![](https://i.imgur.com/qq4AZcR.jpg)
 
-## 2018-04-03
+On Thursday of last week we went into the shop and made the top part of the well, and will be making the rest of the structure (hopefully!) tomorrow;
 
-### Enric & Rebecca
-
-On Thursday of last week we went into the shop and made the top part of the well, and will be making the rest of the structure (hopefully!) tomorrow; 
 ![](https://i.imgur.com/mnSSJiS.jpg)
+
+## 2018-03-27
+
+### Enric
+
+Today we had a learning session about the sewing machine on the Milieux Maker Lab (it's the same model at TAG). It was very productive and it will certainly help a lot in making the roots and the cover for the game. By knowing more about how to make 2 kinds of stitches and how to hem fabric, we'll be able to experiment and try out different formats for the game roots. We've also thought about buying some conductive thread to make the connections sewn into the fabric, for resistance. It should not be too expensive for us, it seems (aprox. 10 CAD for 80m).
 
 ## 2018-03-26
 
