@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Well : MonoBehaviour
+public class Well : Singleton<Well>
 {
     public AnimationCurve movementCurve;
     public float layerOffset;
@@ -35,6 +35,7 @@ public class Well : MonoBehaviour
         float progress = (Time.time % loopTime).Map(0, loopTime, 0, 1f);
         for (int i = 0; i < gardenLayers.Length; i++)
         {
+            gardenLayers[i].gardenIndex = i;
             float layerProgress = (progress + (layerOffset * i)) % 1f;
             gardenLayers[i].progress = layerProgress;
             if (layerProgress <= 0.1f)

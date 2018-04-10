@@ -180,7 +180,9 @@ public class BeeAI : MonoBehaviour
         bee.animator.SetBool("Sad", false);
         bee.animator.SetBool("Happy", false);
         bee.animator.SetBool("Surprised", false);
+        bee.canTeleport = true;
         yield return new WaitForSeconds(Random.Range(1f, 3f));
+        bee.canTeleport = false;
         StartCoroutine(Execute());
     }
 

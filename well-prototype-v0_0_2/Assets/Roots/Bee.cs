@@ -22,9 +22,15 @@ public class Bee : MonoBehaviour
     public bool isMoving;
     public int sorting;
 
+    public int currentGardenIndex;
+    public bool canTeleport;
+    public float teleportProgressLimit;
+    public TeleportFX teleportFX;
+
     void Start()
     {
-        _root = Vector3.zero;
+        currentGardenIndex = 4;
+        _root = Well.Instance.gardenLayers[currentGardenIndex].transform.position;
         _visual = transform.Find("Visual");
         _radius = groundRadius;
         Vector3 pos = _root;
@@ -32,11 +38,40 @@ public class Bee : MonoBehaviour
         _visual.localPosition = pos;
         animator = _visual.GetComponent<Animator>();
         _sprite = _visual.GetComponent<SpriteRenderer>();
+        canTeleport = true;
     }
 
     void Update()
     {
-        _sprite.sortingOrder = sorting;
+        int oldIndex = currentGardenIndex;
+        if (canTeleport)
+        {
+            while (Well.Instance.gardenLayers[currentGardenIndex].progress > teleportProgressLimit)
+            {
+                currentGardenIndex--;
+                if (currentGardenIndex < 0)
+                {
+                    currentGardenIndex = Well.Instance.gardenLayers.Length - 1;
+                }
+                canTeleport = false;
+                var tFxOrigin = Instantiate<TeleportFX>(teleportFX, _visual.transform.position, Quaternion.identity);
+                tFxOrigin.SetSortingOrder(_sprite.sortingOrder + 20);
+            }
+        }
+
+
+
+        _root = Well.Instance.gardenLayers[currentGardenIndex].transform.position;
+        transform.position = _root;
+        _sprite.sortingOrder = Well.Instance.gardenLayers[currentGardenIndex].baseSortingOrder + 15;
+        sorting = _sprite.sortingOrder;
+
+        if (oldIndex != currentGardenIndex)
+        {
+            var tFxDestination = Instantiate<TeleportFX>(teleportFX, _visual.transform.position, Quaternion.identity);
+            tFxDestination.SetSortingOrder(_sprite.sortingOrder + 20);
+        }
+
         // FIX: debug code -> remove;
         if (Input.GetKeyDown(KeyCode.F))
         {
@@ -84,9 +119,9 @@ public class Bee : MonoBehaviour
             float delta = Mathf.Abs(Mathf.DeltaAngle(angle, targetAngle));
             progress = delta.Map(0f, maxDelta, 0f, 1f);
             _radius = groundRadius - _heightCurve.Evaluate(progress) * (groundRadius - minRadius);
-            Vector3 pos = _root;
+            Vector3 pos = Vector3.zero;
             pos.y = -_radius;
-            _visual.localPosition = pos;
+            _visual.transform.localPosition = pos;
             // flip bee in counter-clockwise movement
             var scale = _visual.localScale;
             scale.x = (angularSpeed < 0f && _radius < groundRadius) ? -1f : 1f;
@@ -117,7 +152,7 @@ public class Bee : MonoBehaviour
             angle = newAngle;
             // height controls
             _radius = groundRadius;
-            Vector3 pos = _root;
+            Vector3 pos = Vector3.zero;
             pos.y = -_radius;
             _visual.localPosition = pos;
             // flip bee in counter-clockwise movement

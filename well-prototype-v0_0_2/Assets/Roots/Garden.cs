@@ -5,6 +5,7 @@ using System.Linq;
 
 public class Garden : MonoBehaviour
 {
+    public int gardenIndex;
     public float progress;
     public int plantCapacity;
     public int startSeedlingCount;
@@ -24,7 +25,7 @@ public class Garden : MonoBehaviour
     void Start()
     {
         _fog = GetComponentInChildren<Fog>();
-        _bee = GetComponentInChildren<Bee>();
+        _bee = GameObject.FindObjectOfType<Bee>();
         _cloudsFX = GetComponentInChildren<CloudsFX>();
         _ground = GetComponentInChildren<Ground>();
         biome.garden = this;
@@ -52,7 +53,7 @@ public class Garden : MonoBehaviour
     void LateUpdate()
     {
         _fog.UpdateColor(progress, baseSortingOrder + 20);
-        _bee.sorting = baseSortingOrder + 10;
+
         _cloudsFX.sorting = baseSortingOrder + 17;
         _ground.SetSortingOrder(baseSortingOrder - 200);
         foreach (var plant in plants)
@@ -148,6 +149,10 @@ public class Garden : MonoBehaviour
     {
         plants.ForEach(p => p.MakeInert());
         GenerateSeeds();
+        if (_bee.currentGardenIndex == gardenIndex)
+        {
+            _bee.canTeleport = true;
+        }
     }
 
     public void GenerateSeeds()
