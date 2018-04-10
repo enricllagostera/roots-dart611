@@ -250,6 +250,7 @@ MonoBehaviour:
     humidity: 0
     plantCount: 0
     garden: {fileID: 0}
+  resetLock: 0
 --- !u!114 &114509061749959668
 MonoBehaviour:
   m_ObjectHideFlags: 1

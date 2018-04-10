@@ -6,6 +6,10 @@
 
 Today I'm doing some more work on the digital part of the game. Now that we have the physical controller almost done and mostly functional, it's time to make improvements on feedback and general flow of the game.
 
+After some wok in the morning, I managed to get the game flow to work with resetting and also by object pooling the plants. This way we'll get better performance as the game gets more and more filled with life.
+
+I'll now put some work into moving the bee between layers, instead of having it in one layer only. This will probably involve changing much of its logic to avoid parent-child hierarchy issues.
+
 ## 2018-04-03
 
 ### Enric & Rebecca

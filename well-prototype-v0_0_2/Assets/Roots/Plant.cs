@@ -63,9 +63,11 @@ public class Plant : MonoBehaviour
     {
         activeGrowth = Input.GetKey(this.growthKey);
         activeNutrient = Input.GetKey(this.nutrientKey);
-        // age += Time.deltaTime * ((isAlive) ? 1f : -1f);
-        if (state == EPlantState.SEEDLING || state == EPlantState.NORMAL)
+        bool alive = (state == EPlantState.SEEDLING || state == EPlantState.NORMAL);
+        age += Time.deltaTime * (alive ? 1f : -1f);
+        if (alive)
         {
+
             nutrientFX.SetBool("Active", activeNutrient);
             if (activeGrowth)
             {
