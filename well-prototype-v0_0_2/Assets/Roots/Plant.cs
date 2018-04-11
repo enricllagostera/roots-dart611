@@ -18,7 +18,7 @@ public class Plant : MonoBehaviour
     public float healthDecay;
     public EPlantState state;
     //FX
-    private Animator _animator;
+    public Animator animator;
     private Animator nutrientFX;
     // private Animator reproduceFX;
     public SpriteRenderer visual;
@@ -56,6 +56,7 @@ public class Plant : MonoBehaviour
         _scaleMod = 1f + Random.Range(-scaleModRange / 2f, scaleModRange / 2f);
         visual.transform.localScale *= _scaleMod;
         _garden = transform.parent.GetComponent<Garden>();
+        animator = transform.Find("Visual").GetComponent<Animator>();
     }
 
 
@@ -127,6 +128,7 @@ public class Plant : MonoBehaviour
         health = 0;
         growth = 0;
         state = EPlantState.INERT;
+        animator.Play("inertBT", 0, 1);
     }
 
     public void MakeDead()

@@ -22,6 +22,9 @@ public class Garden : MonoBehaviour
     private int _seedlingCount;
     public bool resetLock;
 
+    public KeyCode waterKey;
+    public float humidityDecay;
+
     void Start()
     {
         _fog = GetComponentInChildren<Fog>();
@@ -50,10 +53,16 @@ public class Garden : MonoBehaviour
 
 
 
+    void Update()
+    {
+        biome.humidity = Mathf.Clamp01(biome.humidity - humidityDecay * Time.deltaTime);
+        _cloudsFX.SetHumidity(biome.humidity);
+    }
+
+
     void LateUpdate()
     {
         _fog.UpdateColor(progress, baseSortingOrder + 20);
-
         _cloudsFX.sorting = baseSortingOrder + 17;
         _ground.SetSortingOrder(baseSortingOrder - 200);
         foreach (var plant in plants)
@@ -74,6 +83,8 @@ public class Garden : MonoBehaviour
     }
      */
 
+
+
     Plant SpawnFrom(PlantInfo plant, Vector3 position)
     {
         var go = Instantiate<Plant>(_plantPrefab, transform.position, transform.rotation, transform);
@@ -89,6 +100,7 @@ public class Garden : MonoBehaviour
         go.MakeInert();
         return go;
     }
+
 
 
     Vector3 GeneratePlantPosition()
@@ -115,6 +127,7 @@ public class Garden : MonoBehaviour
         }
         return random;
     }
+
 
 
     /// Function for creating new plant based on complete info. Used for plant reproduction.
@@ -145,6 +158,8 @@ public class Garden : MonoBehaviour
         newPlant.MakeSeed();
     }
 
+
+
     public void Reset()
     {
         plants.ForEach(p => p.MakeInert());
@@ -154,6 +169,8 @@ public class Garden : MonoBehaviour
             _bee.canTeleport = true;
         }
     }
+
+
 
     public void GenerateSeeds()
     {

@@ -153,6 +153,7 @@ MonoBehaviour:
     reproductionInterval: 0
     sortingOrderMod: 0
     baseScale: 0
+    deathTimer: 0
   nutrientKey: 113
   growthKey: 119
   reproduceKey: 101
@@ -163,6 +164,7 @@ MonoBehaviour:
   growthDecay: 0.2
   healthDecay: 0.2
   state: 0
+  animator: {fileID: 95588234337580774}
   visual: {fileID: 212201130950560466}
   baseSpeed: 0.05
   activeGrowth: 0

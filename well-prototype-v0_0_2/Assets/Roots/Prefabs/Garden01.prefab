@@ -173,6 +173,8 @@ MonoBehaviour:
     plantCount: 0
     garden: {fileID: 0}
   resetLock: 0
+  waterKey: 101
+  humidityDecay: 0.1
 --- !u!114 &114953010412561296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -226,19 +228,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRadiusMin: 12
   spawnRadiusMax: 21.74
-  speedMin: -2
-  speedMax: 2
-  spawnFrequencyMin: 1
-  spawnFrequencyMax: 2
-  durationMin: 10
-  durationMax: 20
+  speedMin: -3
+  speedMax: 3
+  spawnFrequencyMin: 0.2
+  spawnFrequencyMax: 0.5
+  durationMin: 4
+  durationMax: 10
   probability: 1
-  fadeInDuration: 3
-  fadeOutDuration: 3
+  fadeInDuration: 2
+  fadeOutDuration: 2
   cloudPrefab: {fileID: 114350270621540578, guid: 466177ffda9f02a46ad4c9254cab2cba,
     type: 2}
   opacityMax: 0.7
   sorting: 0
+  humidity: 0
 --- !u!212 &212412184891832282
 SpriteRenderer:
   m_ObjectHideFlags: 1

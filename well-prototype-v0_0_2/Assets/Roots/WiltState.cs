@@ -51,7 +51,7 @@ public class WiltState : PlantStateBehaviour
         plant.growth = Mathf.Clamp01(plant.growth);
         plant.health = Mathf.Clamp01(plant.health);
         plant.growth = plant.health;
-        if (plant.health <= 0f)
+        if (plant.health <= 0f && plant.state != EPlantState.INERT)
         {
             plant.MakeDead();
             deathTimer = plant.info.deathTimer;

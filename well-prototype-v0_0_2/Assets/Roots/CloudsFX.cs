@@ -18,6 +18,7 @@ public class CloudsFX : MonoBehaviour
     public Cloud cloudPrefab;
     public float opacityMax;
     public int sorting;
+    public float humidity;
 
     void Start()
     {
@@ -31,7 +32,7 @@ public class CloudsFX : MonoBehaviour
             float idle = Random.Range(spawnFrequencyMin, spawnFrequencyMax);
             yield return new WaitForSeconds(idle);
             float roll = Random.Range(0f, 1f);
-            if (roll <= probability)
+            if (roll <= probability * humidity)
             {
 
                 var cloud = Instantiate(cloudPrefab, transform.position, transform.rotation, transform);
@@ -46,11 +47,19 @@ public class CloudsFX : MonoBehaviour
         } while (enabled);
     }
 
+
+
     void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, spawnRadiusMin);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, spawnRadiusMax);
+    }
+
+
+    public void SetHumidity(float newHumidity)
+    {
+        humidity = newHumidity;
     }
 }

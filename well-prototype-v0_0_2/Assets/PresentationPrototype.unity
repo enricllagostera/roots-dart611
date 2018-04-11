@@ -156,6 +156,46 @@ Prefab:
       propertyPath: m_Name
       value: GardenLayer 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: waterKey
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: humidityDecay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: spawnFrequencyMin
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: spawnFrequencyMax
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: durationMax
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: durationMin
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: speedMin
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: speedMax
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
   m_IsPrefabParent: 0
@@ -348,6 +388,8 @@ MonoBehaviour:
   activeLayerMin: 0.1
   activeLayerMax: 1
   wellDepth: 600
+  waterRate: 0.2
+  possibleWaterKeys: 110100001301000014010000
 --- !u!4 &317841036
 Transform:
   m_ObjectHideFlags: 0
@@ -480,6 +522,36 @@ Prefab:
     - target: {fileID: 1430615223700740, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
       propertyPath: m_Name
       value: GardenLayer 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: spawnFrequencyMin
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: spawnFrequencyMax
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: durationMax
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: durationMin
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: speedMin
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: speedMax
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
@@ -704,6 +776,46 @@ Prefab:
       propertyPath: m_Name
       value: GardenLayer 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: waterKey
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: humidityDecay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: spawnFrequencyMin
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: spawnFrequencyMax
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: durationMax
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: durationMin
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: speedMin
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: speedMax
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
   m_IsPrefabParent: 0
@@ -778,6 +890,46 @@ Prefab:
       propertyPath: m_Name
       value: GardenLayer 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: waterKey
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: humidityDecay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: spawnFrequencyMin
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: spawnFrequencyMax
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: durationMax
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: durationMin
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: speedMin
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: speedMax
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
   m_IsPrefabParent: 0
@@ -834,6 +986,41 @@ Prefab:
     - target: {fileID: 1430615223700740, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
       propertyPath: m_Name
       value: GardenLayer 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: humidityDecay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: spawnFrequencyMin
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: spawnFrequencyMax
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: durationMax
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: durationMin
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: speedMin
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961938618169384, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+        type: 2}
+      propertyPath: speedMax
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}

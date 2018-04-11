@@ -58,4 +58,6 @@ public class Cloud : MonoBehaviour
             timer += Time.deltaTime;
         }
     }
+
+
 }

@@ -17,13 +17,16 @@ public class Well : Singleton<Well>
     public float activeLayerMin;
     public float activeLayerMax;
     public float wellDepth;
+    public float waterRate;
+    public KeyCode[] possibleWaterKeys;
 
     void Start()
     {
         gardenLayers = FindObjectsOfType<Garden>();
+        // gameplay-related setup
         foreach (var layer in gardenLayers)
         {
-            //layer.visual.transform.Rotate(0f, 0f, Random.Range(0f, 360f));
+            layer.waterKey = possibleWaterKeys[Random.Range(0, possibleWaterKeys.Length)];
         }
         layerOffset = 1f / gardenLayers.Length;
     }
@@ -35,6 +38,7 @@ public class Well : Singleton<Well>
         float progress = (Time.time % loopTime).Map(0, loopTime, 0, 1f);
         for (int i = 0; i < gardenLayers.Length; i++)
         {
+            // progress-based handling
             gardenLayers[i].gardenIndex = i;
             float layerProgress = (progress + (layerOffset * i)) % 1f;
             gardenLayers[i].progress = layerProgress;
@@ -47,10 +51,13 @@ public class Well : Singleton<Well>
                 gardenLayers[i].resetLock = true;
                 gardenLayers[i].Reset();
             }
-
             gardenLayers[i].transform.position = new Vector3(0, 0, movementCurve.Evaluate(layerProgress) * wellDepth);
-            // gardenLayers[i].visual.color = gradient.Evaluate(layerProgress);
             gardenLayers[i].baseSortingOrder = (int)(gardenLayers[i].transform.position.z * -20f);
+            // water input handling
+            if (Input.GetKey(gardenLayers[i].waterKey))
+            {
+                gardenLayers[i].biome.humidity = Mathf.Clamp01(gardenLayers[i].biome.humidity + waterRate * Time.deltaTime);
+            }
         }
     }
 }
