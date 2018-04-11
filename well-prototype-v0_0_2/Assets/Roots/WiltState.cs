@@ -27,7 +27,7 @@ public class WiltState : PlantStateBehaviour
             deathTimer -= Time.deltaTime;
             if (deathTimer <= 0)
             {
-                animator.Play("inertBT", 0, 0);
+                plant.MakeInert();
             }
             return;
         }

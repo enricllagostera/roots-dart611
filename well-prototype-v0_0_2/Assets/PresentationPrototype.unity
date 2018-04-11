@@ -154,7 +154,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1430615223700740, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
       propertyPath: m_Name
-      value: Garden01 (1)
+      value: GardenLayer 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
@@ -253,7 +253,7 @@ MonoBehaviour:
   maxSpeed: 30
   minRadius: 12
   _smoothFactor: 1
-  animator: {fileID: 0}
+  animator: {fileID: 824875330}
   isMoving: 0
   sorting: 0
   currentGardenIndex: 4
@@ -338,6 +338,10 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   gardenLayers:
   - {fileID: 1378486242}
+  - {fileID: 1587349012}
+  - {fileID: 538637329}
+  - {fileID: 881915079}
+  - {fileID: 1318616079}
   loopTime: 100
   timer: 0
   timeScale: 1
@@ -428,6 +432,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &538637329 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+    type: 2}
+  m_PrefabInternal: {fileID: 880031532}
+  m_Script: {fileID: 11500000, guid: e96de8191b803d4449762fa5f8515ff2, type: 3}
 --- !u!1001 &614285010
 Prefab:
   m_ObjectHideFlags: 0
@@ -469,7 +479,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1430615223700740, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
       propertyPath: m_Name
-      value: Garden01 (4)
+      value: GardenLayer 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
@@ -692,7 +702,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1430615223700740, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
       propertyPath: m_Name
-      value: Garden01 (2)
+      value: GardenLayer 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
@@ -702,6 +712,18 @@ Transform:
   m_PrefabParentObject: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
     type: 2}
   m_PrefabInternal: {fileID: 880031532}
+--- !u!114 &881915079 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1407478105}
+  m_Script: {fileID: 11500000, guid: e96de8191b803d4449762fa5f8515ff2, type: 3}
+--- !u!114 &1318616079 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+    type: 2}
+  m_PrefabInternal: {fileID: 614285010}
+  m_Script: {fileID: 11500000, guid: e96de8191b803d4449762fa5f8515ff2, type: 3}
 --- !u!114 &1378486242 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
@@ -754,7 +776,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1430615223700740, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
       propertyPath: m_Name
-      value: Garden01 (3)
+      value: GardenLayer 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
@@ -764,6 +786,12 @@ Transform:
   m_PrefabParentObject: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
     type: 2}
   m_PrefabInternal: {fileID: 1407478105}
+--- !u!114 &1587349012 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114298197732924588, guid: d47b48b0e4b127845bfd9b4c5686ee3a,
+    type: 2}
+  m_PrefabInternal: {fileID: 875513}
+  m_Script: {fileID: 11500000, guid: e96de8191b803d4449762fa5f8515ff2, type: 3}
 --- !u!1001 &1944050984
 Prefab:
   m_ObjectHideFlags: 0
@@ -802,6 +830,10 @@ Prefab:
     - target: {fileID: 4217051306194108, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430615223700740, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
+      propertyPath: m_Name
+      value: GardenLayer 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d47b48b0e4b127845bfd9b4c5686ee3a, type: 2}
