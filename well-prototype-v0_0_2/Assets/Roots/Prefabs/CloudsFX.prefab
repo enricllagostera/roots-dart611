@@ -64,3 +64,6 @@ MonoBehaviour:
   fadeOutDuration: 1
   cloudPrefab: {fileID: 114350270621540578, guid: 466177ffda9f02a46ad4c9254cab2cba,
     type: 2}
+  opacityMax: 0.7
+  sorting: 0
+  humidity: 1

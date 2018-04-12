@@ -80,7 +80,6 @@ public class Well : Singleton<Well>
 
     public void InputChangeHandler()
     {
-        //Debug.Log("zero");
         inputStagnationTimer = 0;
     }
 }

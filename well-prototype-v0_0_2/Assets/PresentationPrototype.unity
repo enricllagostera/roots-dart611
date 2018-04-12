@@ -259,7 +259,7 @@ MonoBehaviour:
   currentGardenIndex: 4
   canTeleport: 1
   teleportProgressLimit: 0.75
-  teleportFX: {fileID: 114162613360116930, guid: a006b14140a168c46a1cfcc97c48f861,
+  teleportFX: {fileID: 114615591062984280, guid: a006b14140a168c46a1cfcc97c48f861,
     type: 2}
 --- !u!1 &317841034
 GameObject:

@@ -13,15 +13,15 @@ public class Cloud : MonoBehaviour
     public float angle;
     public float opacityMax;
     public Sprite[] allSprites;
-    private SpriteRenderer _sprite;
+    public SpriteRenderer sprite;
     private float _timer;
     private CloudsFX _fx;
 
     void Start()
     {
         _timer = lifetime;
-        _sprite = GetComponent<SpriteRenderer>();
-        _sprite.sprite = allSprites[UnityEngine.Random.Range(0, allSprites.Length)];
+        sprite = GetComponent<SpriteRenderer>();
+        sprite.sprite = allSprites[UnityEngine.Random.Range(0, allSprites.Length)];
         Destroy(gameObject, lifetime);
         StartCoroutine(Fade(0f, opacityMax, fadeInDuration));
         _fx = transform.parent.GetComponent<CloudsFX>();
@@ -43,7 +43,7 @@ public class Cloud : MonoBehaviour
         newPosition.y = y;
         transform.localPosition = newPosition;
         transform.up = transform.parent.position - transform.position;
-        _sprite.sortingOrder = _fx.sorting;
+        sprite.sortingOrder = _fx.sorting;
     }
 
     private IEnumerator Fade(float startValue, float targetValue, float duration)
@@ -51,9 +51,9 @@ public class Cloud : MonoBehaviour
         float timer = 0f;
         while (timer <= duration)
         {
-            Color color = _sprite.color;
+            Color color = sprite.color;
             color.a = Mathf.Lerp(startValue, targetValue, timer / duration);
-            _sprite.color = color;
+            sprite.color = color;
             yield return null;
             timer += Time.deltaTime;
         }
