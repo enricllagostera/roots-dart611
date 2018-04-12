@@ -204,6 +204,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   growthAnimationMod: 0.01
   growthAnimationSpeed: 2.5
+  newPlantFX: {fileID: 114575792699874908, guid: 7877e94f50eb90645ad5611a7fba0c13,
+    type: 2}
 --- !u!212 &212201130950560466
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -42,8 +42,9 @@ public class Plant : MonoBehaviour
     private float _scaleMod;
 
     public InputHandler NotifyInputChange;
+    public NewPlantFX newPlantFX;
 
-    void Start()
+    void Awake()
     {
         // wire-up
         nutrientFX = transform.Find("NutrientFX").GetComponent<Animator>();
@@ -64,9 +65,6 @@ public class Plant : MonoBehaviour
 
     void Update()
     {
-
-
-
         bool oldInput = activeGrowth;
         activeGrowth = Input.GetKey(this.growthKey);
         activeNutrient = activeGrowth;
@@ -171,6 +169,8 @@ public class Plant : MonoBehaviour
             health = 0;
             growth = 0;
             state = EPlantState.SEEDLING;
+            var fx = GameObject.Instantiate<NewPlantFX>(newPlantFX, transform.position, Quaternion.identity);
+            fx.sprite.sortingOrder = _garden.baseSortingOrder + 11;
         }
     }
 
