@@ -45,6 +45,7 @@ public class Garden : MonoBehaviour
             if (plantPick != null)
             {
                 plant = SpawnFrom(plantPick, randomPosition);
+                plant.NotifyInputChange += Well.Instance.InputChangeHandler;
             }
         }
         resetLock = false;

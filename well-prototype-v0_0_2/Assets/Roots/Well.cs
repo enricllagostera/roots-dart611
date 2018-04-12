@@ -13,12 +13,16 @@ public class Well : Singleton<Well>
 
     [Range(0.01f, 5f)]
     public float timeScale = 1f;
+    public float timeScaleMin, timeScaleMax;
 
     public float activeLayerMin;
     public float activeLayerMax;
     public float wellDepth;
     public float waterRate;
     public KeyCode[] possibleWaterKeys;
+    public float inputStagnationTimer;
+    public float inputStagnationThreshold;
+    public float pacingFactor;
 
     void Start()
     {
@@ -59,5 +63,24 @@ public class Well : Singleton<Well>
                 gardenLayers[i].biome.humidity = Mathf.Clamp01(gardenLayers[i].biome.humidity + waterRate * Time.deltaTime);
             }
         }
+        UpdateInputMetrics();
+    }
+
+
+
+    void UpdateInputMetrics()
+    {
+        inputStagnationTimer += Time.deltaTime;
+        float rate = inputStagnationTimer.Map(0, inputStagnationThreshold, 0f, 1f);
+        float unclampedTimeScale = Mathf.Lerp(timeScale, rate.Map(0f, 1f, timeScaleMin, timeScaleMax), Time.deltaTime * pacingFactor);
+        timeScale = Mathf.Clamp(unclampedTimeScale, timeScaleMin, timeScaleMax);
+    }
+
+
+
+    public void InputChangeHandler()
+    {
+        //Debug.Log("zero");
+        inputStagnationTimer = 0;
     }
 }

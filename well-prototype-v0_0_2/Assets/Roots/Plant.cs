@@ -41,6 +41,8 @@ public class Plant : MonoBehaviour
     public float growthAnimationSpeed;
     private float _scaleMod;
 
+    public InputHandler NotifyInputChange;
+
     void Start()
     {
         // wire-up
@@ -62,8 +64,28 @@ public class Plant : MonoBehaviour
 
     void Update()
     {
+
+
+
+        bool oldInput = activeGrowth;
         activeGrowth = Input.GetKey(this.growthKey);
         activeNutrient = activeGrowth;
+
+        if (state == EPlantState.INERT)
+        {
+            nutrientFX.SetBool("Active", false);
+            return;
+        }
+
+
+        if (oldInput != activeGrowth)
+        {
+            if (NotifyInputChange != null)
+            {
+                NotifyInputChange();
+            }
+        }
+
         bool alive = (state == EPlantState.SEEDLING || state == EPlantState.NORMAL);
         age += Time.deltaTime * (alive ? 1f : -1f);
         if (alive)
