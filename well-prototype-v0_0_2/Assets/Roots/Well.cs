@@ -36,6 +36,11 @@ public class Well : Singleton<Well>
     public Glitch glitchFX;
     public float glitchDurationBaserate;
 
+    [Header("SFX")]
+    public RandomSampleSFX newPlantSFX;
+    public RandomSampleSFX glitchSFX;
+    public AmbienceSFX rainAmbienceSFX;
+
     void Start()
     {
         gardenLayers = FindObjectsOfType<Garden>();
@@ -53,6 +58,7 @@ public class Well : Singleton<Well>
         _inputFXtimer -= Time.deltaTime;
         Time.timeScale = timeScale;
         float progress = (Time.time % loopTime).Map(0, loopTime, 0, 1f);
+        float rain = 0f;
         for (int i = 0; i < gardenLayers.Length; i++)
         {
             // progress-based handling
@@ -79,7 +85,9 @@ public class Well : Singleton<Well>
                 }
                 gardenLayers[i].biome.humidity = Mathf.Clamp01(gardenLayers[i].biome.humidity + waterRate * Time.deltaTime);
             }
+            rain += gardenLayers[i].biome.humidity / gardenLayers.Length;
         }
+        rainAmbienceSFX.SetVolume(rain);
         UpdateInputMetrics();
     }
 
@@ -120,7 +128,14 @@ public class Well : Singleton<Well>
     IEnumerator StartDeadFX(float duration)
     {
         glitchFX.enabled = true;
+        glitchSFX.Begin(1f);
         yield return new WaitForSeconds(duration * glitchDurationBaserate);
         glitchFX.enabled = false;
+        glitchSFX.Stop();
+    }
+
+    public void PlayNewPlantSFX(float value)
+    {
+        newPlantSFX.Play(value);
     }
 }

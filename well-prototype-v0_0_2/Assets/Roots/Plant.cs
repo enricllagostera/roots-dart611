@@ -165,8 +165,10 @@ public class Plant : MonoBehaviour
             health = 0;
             growth = 0;
             state = EPlantState.SEEDLING;
+            info.reproductionInterval += Random.Range(0f, 0.5f);
             var fx = GameObject.Instantiate<NewPlantFX>(newPlantFX, transform.position, Quaternion.identity);
             fx.sprite.sortingOrder = _garden.baseSortingOrder + 11;
+            Well.Instance.PlayNewPlantSFX(_garden.progress);
             RandomizeInputs(Well.Instance.inputPool);
         }
     }
