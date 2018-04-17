@@ -39,6 +39,8 @@ public class Well : Singleton<Well>
     [Header("SFX")]
     public RandomSampleSFX newPlantSFX;
     public RandomSampleSFX glitchSFX;
+    public RandomSampleSFX rootConnectionSFX;
+    public RandomSampleSFX waterConnectionSFX;
     public AmbienceSFX rainAmbienceSFX;
 
     void Start()
@@ -109,6 +111,14 @@ public class Well : Singleton<Well>
         if (_inputFXtimer <= 0)
         {
             Instantiate<ScreenFlashFX>((isRoot) ? inputFXRoot : inputFXWater, Vector3.zero, Quaternion.identity);
+            if (isRoot)
+            {
+                rootConnectionSFX.Play(1f);
+            }
+            else
+            {
+                waterConnectionSFX.Play(1f);
+            }
             _inputFXtimer = inputFXCooldown;
         }
     }
