@@ -1,1 +1,1 @@
-public delegate void InputHandler();
+public delegate void InputHandler(bool isRoot);

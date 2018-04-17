@@ -25,7 +25,8 @@ public class Well : Singleton<Well>
     public float inputStagnationThreshold;
     public float pacingFactor;
 
-    public ScreenFlashFX inputFX;
+    public ScreenFlashFX inputFXRoot;
+    public ScreenFlashFX inputFXWater;
 
     public List<KeyCode> inputPool;
 
@@ -72,6 +73,10 @@ public class Well : Singleton<Well>
             // water input handling
             if (Input.GetKey(gardenLayers[i].waterKey))
             {
+                if (Input.GetKeyDown(gardenLayers[i].waterKey))
+                {
+                    InputChangeHandler(false);
+                }
                 gardenLayers[i].biome.humidity = Mathf.Clamp01(gardenLayers[i].biome.humidity + waterRate * Time.deltaTime);
             }
         }
@@ -90,12 +95,12 @@ public class Well : Singleton<Well>
 
 
 
-    public void InputChangeHandler()
+    public void InputChangeHandler(bool isRoot)
     {
         inputStagnationTimer = 0;
         if (_inputFXtimer <= 0)
         {
-            Instantiate<ScreenFlashFX>(inputFX, Vector3.zero, Quaternion.identity);
+            Instantiate<ScreenFlashFX>((isRoot) ? inputFXRoot : inputFXWater, Vector3.zero, Quaternion.identity);
             _inputFXtimer = inputFXCooldown;
         }
     }

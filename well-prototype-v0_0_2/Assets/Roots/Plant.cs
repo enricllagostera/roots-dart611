@@ -93,7 +93,7 @@ public class Plant : MonoBehaviour
         {
             if (NotifyInputChange != null)
             {
-                NotifyInputChange();
+                NotifyInputChange(true);
             }
         }
 

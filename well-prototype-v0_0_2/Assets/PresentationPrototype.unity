@@ -365,7 +365,10 @@ MonoBehaviour:
   inputStagnationTimer: 0
   inputStagnationThreshold: 20
   pacingFactor: 2
-  inputFX: {fileID: 114394059086037288, guid: d9f77cbc7bb737649a41081dae19d6a5, type: 2}
+  inputFXRoot: {fileID: 114394059086037288, guid: d3d66fe242b844443a781835ca3d38b8,
+    type: 2}
+  inputFXWater: {fileID: 114394059086037288, guid: d9f77cbc7bb737649a41081dae19d6a5,
+    type: 2}
   inputPool: 6100000073000000640000006600000067000000
   inputFXCooldown: 0.5
   glitchFX: {fileID: 752079331}

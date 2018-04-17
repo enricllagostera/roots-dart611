@@ -9,6 +9,7 @@ public class ScreenFlashFX : MonoBehaviour
     public float duration;
     private float _timer;
     public AnimationCurve opacity;
+
     public Vector2 hueRange;
     public Vector2 saturationRange;
     public Vector2 valueRange;

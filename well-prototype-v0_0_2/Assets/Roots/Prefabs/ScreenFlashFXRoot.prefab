@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212576697410054302}
   - component: {fileID: 114394059086037288}
   m_Layer: 0
-  m_Name: ScreenFlashFX
+  m_Name: ScreenFlashFXRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,10 +64,10 @@ MonoBehaviour:
       outSlope: 0.28207022
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.062154986
-      value: 0.14081275
+      time: 0.06667922
+      value: 0.21109474
       inSlope: 0.46876785
-      outSlope: -0.25976858
+      outSlope: -0.41609922
       tangentMode: 1
     - serializedVersion: 2
       time: 1
@@ -78,9 +78,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
-  hueRange: {x: 0, y: 1}
-  saturationRange: {x: 0.9, y: 1}
-  valueRange: {x: 0.9, y: 1}
+  hueRange: {x: 0.15, y: 0.17}
+  saturationRange: {x: 0.7, y: 0.75}
+  valueRange: {x: 0.5, y: 0.55}
 --- !u!212 &212576697410054302
 SpriteRenderer:
   m_ObjectHideFlags: 1
