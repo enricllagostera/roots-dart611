@@ -43,6 +43,7 @@ public class Plant : MonoBehaviour
 
     public InputHandler NotifyInputChange;
     public NewPlantFX newPlantFX;
+    public NewPlantFX deadPlantFX;
     public Vector2 activeRange;
 
     void Awake()
@@ -148,6 +149,9 @@ public class Plant : MonoBehaviour
         if (state != EPlantState.DEAD)
         {
             // #todo change animation
+            var fx = GameObject.Instantiate<NewPlantFX>(deadPlantFX, transform.position, Quaternion.identity);
+            fx.sprite.sortingOrder = _garden.baseSortingOrder + 11;
+            Well.Instance.PlantDeadFX(_garden.progress);
             state = EPlantState.DEAD;
             age *= -1f;
         }

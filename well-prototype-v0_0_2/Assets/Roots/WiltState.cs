@@ -27,6 +27,7 @@ public class WiltState : PlantStateBehaviour
             deathTimer -= Time.deltaTime;
             if (deathTimer <= 0)
             {
+                Well.Instance.PlantDeadFX(0.2f);
                 plant.MakeInert();
             }
             return;

@@ -162,8 +162,8 @@ MonoBehaviour:
   health: 0
   growthSpeed: 1
   healthSpeed: 1
-  growthDecay: 0.1
-  healthDecay: 0.1
+  growthDecay: 0.2
+  healthDecay: 0.2
   state: 0
   animator: {fileID: 95588234337580774}
   visual: {fileID: 212201130950560466}
@@ -206,6 +206,8 @@ MonoBehaviour:
   growthAnimationMod: 0.01
   growthAnimationSpeed: 2.5
   newPlantFX: {fileID: 114575792699874908, guid: 7877e94f50eb90645ad5611a7fba0c13,
+    type: 2}
+  deadPlantFX: {fileID: 114575792699874908, guid: caa8a573b8a08b74a8991d68f476015a,
     type: 2}
   activeRange: {x: 0.5, y: 1}
 --- !u!212 &212201130950560466

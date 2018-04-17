@@ -368,6 +368,8 @@ MonoBehaviour:
   inputFX: {fileID: 114394059086037288, guid: d9f77cbc7bb737649a41081dae19d6a5, type: 2}
   inputPool: 6100000073000000640000006600000067000000
   inputFXCooldown: 0.5
+  glitchFX: {fileID: 752079331}
+  glitchDurationBaserate: 4
 --- !u!4 &317841036
 Transform:
   m_ObjectHideFlags: 0

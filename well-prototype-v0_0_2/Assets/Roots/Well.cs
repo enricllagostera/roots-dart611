@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Colorful;
 
 public class Well : Singleton<Well>
 {
@@ -30,6 +31,9 @@ public class Well : Singleton<Well>
 
     public float inputFXCooldown;
     private float _inputFXtimer;
+
+    public Glitch glitchFX;
+    public float glitchDurationBaserate;
 
     void Start()
     {
@@ -94,5 +98,24 @@ public class Well : Singleton<Well>
             Instantiate<ScreenFlashFX>(inputFX, Vector3.zero, Quaternion.identity);
             _inputFXtimer = inputFXCooldown;
         }
+    }
+
+    public void PlantDeadFX(float layerProgress)
+    {
+        if (glitchFX.enabled)
+        {
+
+        }
+        else
+        {
+            StartCoroutine(StartDeadFX(layerProgress));
+        }
+    }
+
+    IEnumerator StartDeadFX(float duration)
+    {
+        glitchFX.enabled = true;
+        yield return new WaitForSeconds(duration * glitchDurationBaserate);
+        glitchFX.enabled = false;
     }
 }
