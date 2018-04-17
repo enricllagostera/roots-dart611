@@ -38,12 +38,7 @@ public class Roots : Singleton<Roots>
             }
             Debug.Log("RANDOMIZE ALL");
             activeLayer = newLayer;
-            // RandomizeInputs();
             allPlantsInLayer = activeLayer.GetComponentsInChildren<Plant>();
-            foreach (var plant in allPlantsInLayer)
-            {
-                plant.RandomizeInputs();
-            }
         }
     }
 

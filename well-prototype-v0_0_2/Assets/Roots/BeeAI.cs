@@ -34,13 +34,14 @@ public class BeeAI : MonoBehaviour
         moving = false;
         bee = GetComponent<Bee>();
         previousAction = EBeehavior.IDLE;
+        StartCoroutine(Execute());
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            StartCoroutine(Execute());
+            // StartCoroutine(Execute());
         }
     }
 

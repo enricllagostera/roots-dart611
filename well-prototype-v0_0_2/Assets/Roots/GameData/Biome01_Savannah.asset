@@ -13,25 +13,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trees:
   - kind: 3
-    reproductionInterval: 11
+    reproductionInterval: 20
     sortingOrderMod: -2
     baseScale: 12
     deathTimer: 30
+    growthSpeed: 0.5
   flowers:
   - kind: 0
-    reproductionInterval: 5
+    reproductionInterval: 20
     sortingOrderMod: 2
     baseScale: 5
     deathTimer: 10
+    growthSpeed: 0.8
   grass:
   - kind: 2
-    reproductionInterval: 3
+    reproductionInterval: 20
     sortingOrderMod: 1
     baseScale: 5
     deathTimer: 10
+    growthSpeed: 0.8
   - kind: 2
-    reproductionInterval: 2
+    reproductionInterval: 20
     sortingOrderMod: 1
     baseScale: 5
     deathTimer: 10
+    growthSpeed: 0.8
   props: []

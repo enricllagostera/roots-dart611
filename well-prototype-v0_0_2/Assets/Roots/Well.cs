@@ -24,6 +24,13 @@ public class Well : Singleton<Well>
     public float inputStagnationThreshold;
     public float pacingFactor;
 
+    public ScreenFlashFX inputFX;
+
+    public List<KeyCode> inputPool;
+
+    public float inputFXCooldown;
+    private float _inputFXtimer;
+
     void Start()
     {
         gardenLayers = FindObjectsOfType<Garden>();
@@ -38,6 +45,7 @@ public class Well : Singleton<Well>
 
     void Update()
     {
+        _inputFXtimer -= Time.deltaTime;
         Time.timeScale = timeScale;
         float progress = (Time.time % loopTime).Map(0, loopTime, 0, 1f);
         for (int i = 0; i < gardenLayers.Length; i++)
@@ -81,5 +89,10 @@ public class Well : Singleton<Well>
     public void InputChangeHandler()
     {
         inputStagnationTimer = 0;
+        if (_inputFXtimer <= 0)
+        {
+            Instantiate<ScreenFlashFX>(inputFX, Vector3.zero, Quaternion.identity);
+            _inputFXtimer = inputFXCooldown;
+        }
     }
 }

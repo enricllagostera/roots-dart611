@@ -73,11 +73,11 @@ public class Bee : MonoBehaviour
         }
 
         // FIX: debug code -> remove;
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            targetAngle = Random.Range(0f, 360f);
-            StartCoroutine(Fly());
-        }
+        // if (Input.GetKeyDown(KeyCode.F))
+        // {
+        //     targetAngle = Random.Range(0f, 360f);
+        //     StartCoroutine(Fly());
+        // }
 
         // bee is on the ground
         if (groundRadius <= _radius + 0.2f)

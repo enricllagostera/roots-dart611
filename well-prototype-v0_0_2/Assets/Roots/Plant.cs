@@ -43,6 +43,7 @@ public class Plant : MonoBehaviour
 
     public InputHandler NotifyInputChange;
     public NewPlantFX newPlantFX;
+    public Vector2 activeRange;
 
     void Awake()
     {
@@ -65,18 +66,29 @@ public class Plant : MonoBehaviour
 
     void Update()
     {
-        bool oldInput = activeGrowth;
-        activeGrowth = Input.GetKey(this.growthKey);
-        activeNutrient = activeGrowth;
-
         if (state == EPlantState.INERT)
         {
             nutrientFX.SetBool("Active", false);
             return;
         }
 
+        visual.sortingOrder = _garden.baseSortingOrder + 5;
 
-        if (oldInput != activeGrowth)
+        if (_garden.progress < activeRange.x || _garden.progress > activeRange.y)
+        {
+            activeGrowth = activeNutrient = false;
+            nutrientFX.SetBool("Active", false);
+            return;
+        }
+
+        bool oldInput = activeGrowth;
+        activeGrowth = Input.GetKey(this.growthKey);
+        activeNutrient = activeGrowth;
+
+        bool alive = (state == EPlantState.SEEDLING || state == EPlantState.NORMAL);
+        age += Time.deltaTime * (alive ? 1f : -1f);
+
+        if (oldInput != activeGrowth && age > 0.2f)
         {
             if (NotifyInputChange != null)
             {
@@ -84,14 +96,12 @@ public class Plant : MonoBehaviour
             }
         }
 
-        bool alive = (state == EPlantState.SEEDLING || state == EPlantState.NORMAL);
-        age += Time.deltaTime * (alive ? 1f : -1f);
         if (alive)
         {
             nutrientFX.SetBool("Active", activeNutrient);
             if (activeGrowth)
             {
-                visual.sortingOrder = _garden.baseSortingOrder + 5;
+
                 visual.transform.localScale = Vector3.one * (1f + (growthAnimationMod *
                     Mathf.Sin((Time.realtimeSinceStartup + transform.position.z) * growthAnimationSpeed)));
                 visual.transform.localScale *= _scaleMod;
@@ -103,29 +113,11 @@ public class Plant : MonoBehaviour
         }
     }
 
-    public void RandomizeInputs()
+    public void RandomizeInputs(List<KeyCode> availableInputs)
     {
-        List<KeyCode> keys = new List<KeyCode>(Roots.Instance.availableInputs);
-        int assigned = 0;
-        while (assigned < 3)
-        {
-            int i = Random.Range(0, keys.Count);
-            KeyCode pick = keys[i];
-            if (assigned == 0)
-            {
-                nutrientKey = pick;
-            }
-            else if (assigned == 1)
-            {
-                growthKey = pick;
-            }
-            else if (assigned == 2)
-            {
-                reproduceKey = pick;
-            }
-            assigned++;
-            keys.RemoveAt(i);
-        }
+        List<KeyCode> keys = new List<KeyCode>(availableInputs);
+        int i = Random.Range(0, keys.Count);
+        growthKey = nutrientKey = keys[i];
     }
 
     public void ClearInputs()
@@ -171,6 +163,7 @@ public class Plant : MonoBehaviour
             state = EPlantState.SEEDLING;
             var fx = GameObject.Instantiate<NewPlantFX>(newPlantFX, transform.position, Quaternion.identity);
             fx.sprite.sortingOrder = _garden.baseSortingOrder + 11;
+            RandomizeInputs(Well.Instance.inputPool);
         }
     }
 

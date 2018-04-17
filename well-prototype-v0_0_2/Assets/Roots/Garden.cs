@@ -163,6 +163,7 @@ public class Garden : MonoBehaviour
 
     public void Reset()
     {
+        progress = 0f;
         plants.ForEach(p => p.MakeInert());
         GenerateSeeds();
         if (_bee.currentGardenIndex == gardenIndex)

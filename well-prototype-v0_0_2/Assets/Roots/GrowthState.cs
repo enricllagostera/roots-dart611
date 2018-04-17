@@ -24,7 +24,7 @@ public class GrowthState : PlantStateBehaviour
         }
         if (plant.activeGrowth && plant.health > 0.5f)
         {
-            plant.growth += Time.deltaTime * plant.growthSpeed;
+            plant.growth += Time.deltaTime * plant.info.growthSpeed;
         }
         // keep data in coeficient range
         plant.growth = Mathf.Clamp01(plant.growth);

@@ -154,6 +154,7 @@ MonoBehaviour:
     sortingOrderMod: 0
     baseScale: 0
     deathTimer: 0
+    growthSpeed: 0
   nutrientKey: 113
   growthKey: 119
   reproduceKey: 101
@@ -161,8 +162,8 @@ MonoBehaviour:
   health: 0
   growthSpeed: 1
   healthSpeed: 1
-  growthDecay: 0.2
-  healthDecay: 0.2
+  growthDecay: 0.1
+  healthDecay: 0.1
   state: 0
   animator: {fileID: 95588234337580774}
   visual: {fileID: 212201130950560466}
@@ -206,6 +207,7 @@ MonoBehaviour:
   growthAnimationSpeed: 2.5
   newPlantFX: {fileID: 114575792699874908, guid: 7877e94f50eb90645ad5611a7fba0c13,
     type: 2}
+  activeRange: {x: 0.5, y: 1}
 --- !u!212 &212201130950560466
 SpriteRenderer:
   m_ObjectHideFlags: 1
