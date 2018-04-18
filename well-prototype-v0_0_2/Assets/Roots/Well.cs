@@ -43,6 +43,11 @@ public class Well : Singleton<Well>
     public RandomSampleSFX waterConnectionSFX;
     public AmbienceSFX rainAmbienceSFX;
 
+    [Header("Instructions")]
+    public float instructionInterval;
+    public float instructionFadeFactor;
+    public SpriteRenderer instructionImg;
+
     void Start()
     {
         gardenLayers = FindObjectsOfType<Garden>();
@@ -101,6 +106,20 @@ public class Well : Singleton<Well>
         float rate = inputStagnationTimer.Map(0, inputStagnationThreshold, 0f, 1f);
         float unclampedTimeScale = Mathf.Lerp(timeScale, rate.Map(0f, 1f, timeScaleMin, timeScaleMax), Time.deltaTime * pacingFactor);
         timeScale = Mathf.Clamp(unclampedTimeScale, timeScaleMin, timeScaleMax);
+
+        if (inputStagnationTimer >= instructionInterval)
+        {
+            Color color = Color.white;
+            color.a = inputStagnationTimer.Map(instructionInterval, instructionInterval + 2f, 0, 1f);
+            instructionImg.color = color;
+        }
+        else
+        {
+            Color color = Color.white;
+            color.a = Mathf.Lerp(instructionImg.color.a, Color.clear.a, Time.deltaTime * instructionFadeFactor);
+            instructionImg.color = color;
+
+        }
     }
 
 
