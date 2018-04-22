@@ -1,5 +1,10 @@
 # Project Logs
 
+# 2018-04-22
+### Rebecca
+Today I hosted a short informal playtesting with an intergenerational group of folks, a session that proved to yield a lot of insights.
+
+
 ## 2018-04-20
 ### Rebecca
 Yesterday was our final presentation with the faculty for our project. I felt that the event was both constructive in its critique and affirming of some of the suspicions we'd been thinking about as potential areas of improvement. For example, the tactile feedback of the roots - velcro with conductive thread - was something that was a bit too easily lost in the sea of materials under the well. The scale of the unit was also something that needed some adjustment; Pippin and Jonathan had a bit of a hard time, which makes me wonder what it would be like for a child to play. More importantly, this session gave us ideas for how we will refine the project for the future - how we will make the well a "well console" for telling many stories about intergenerational care. In terms of other lessons learned, we will be seeking to create a physical design that is able to be tested along with the digital game. That is, because of the scale of the unit, the game's playtesting was left until later out of class timeline necessity. This iterative feedback however is integral to the design process, especially one that is social and reflective in nature.
