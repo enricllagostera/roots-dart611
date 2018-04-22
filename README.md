@@ -1,11 +1,22 @@
 # Project Logs
 
-# 2018-04-22
 ### Rebecca
-Today I hosted a short informal playtesting with an intergenerational group of folks, a session that proved to yield a lot of insights.
+Today I hosted a short informal playtesting with an intergenerational group of folks.
+Some quick notes I jotted down include:
 
+* the height of the game needs some work. The children (all under seven) weren't able to see the top while playing, ducking up and down to see what was going on. (Although, maybe we could play with this difference if we had "below" feedback…)
+* the players (young and old) weren't always sure about what they were connecting. Jonathan was on hand to translate from French to English for me, but telling the players about "velcro" ends didn't necessarily mean people knew what to do with them (i.e., one adult told me they thought maybe they had to connect the roots themselves vs. the roots to the cushions)
+* children ended up doing a lot of explaining to the adults, which was interesting given the above noted problems with height disparity. They were commandingly saying things like, "see look the flowers are growing! connect the thing over there!” (etc.)
+* children were generally more open and curious to playing; they jumped in without hesitation
+* children were also excited to see clear cause and effect. The impact of their actions was something that they seemed to really enjoy 
+* the body of the well itself is something that's underused; it serves to be hugged which is great, but I think from how the kids were tugging at the fabric, we could play with that materiality more
+* my lifting of the well to show the roots was really powerful; all gathered around to see what was going on
+*  the group I was with, a family, ended up playing with more than two people together at once (which was an interesting dynamic - lots of group discussion about what to do)
 
-## 2018-04-20
+While a lot of these points are technical things that I think we can smooth out as we continue with the project, the tricky thing will be to consider how these interactions relate to reflection. The moments where both parties really connected together - seeing the roots at the end, both realizing something had died when I pointed it out - were almost in themselves little kinds of debriefs or reflections-on-actions, whereas the decisions made while playing ("connect this root here!") could I think be refined to also be more reflection-in-actiony.  
+
+Because this whole thing is so unknown for players, there is a lot of discovery and patience that needs to be balanced. On the part of the older players there is also an extra layer of cynicism. One adult told me for example this seemed like a girl’s game; another got frustrated very quickly when growth wasn’t happening. Here I think the eagerness of the children to be leaders is a powerful dynamic for play and reflection alike.
+
 ### Rebecca
 Yesterday was our final presentation with the faculty for our project. I felt that the event was both constructive in its critique and affirming of some of the suspicions we'd been thinking about as potential areas of improvement. For example, the tactile feedback of the roots - velcro with conductive thread - was something that was a bit too easily lost in the sea of materials under the well. The scale of the unit was also something that needed some adjustment; Pippin and Jonathan had a bit of a hard time, which makes me wonder what it would be like for a child to play. More importantly, this session gave us ideas for how we will refine the project for the future - how we will make the well a "well console" for telling many stories about intergenerational care. In terms of other lessons learned, we will be seeking to create a physical design that is able to be tested along with the digital game. That is, because of the scale of the unit, the game's playtesting was left until later out of class timeline necessity. This iterative feedback however is integral to the design process, especially one that is social and reflective in nature.
 
