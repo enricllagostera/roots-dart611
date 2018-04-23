@@ -66,6 +66,7 @@ public class Well : Singleton<Well>
         Time.timeScale = timeScale;
         float progress = (Time.time % loopTime).Map(0, loopTime, 0, 1f);
         float rain = 0f;
+
         for (int i = 0; i < gardenLayers.Length; i++)
         {
             // progress-based handling
@@ -83,13 +84,25 @@ public class Well : Singleton<Well>
             }
             gardenLayers[i].transform.position = new Vector3(0, 0, movementCurve.Evaluate(layerProgress) * wellDepth);
             gardenLayers[i].baseSortingOrder = (int)(gardenLayers[i].transform.position.z * -20f);
-            // water input handling
-            if (Input.GetKey(gardenLayers[i].waterKey))
+        }
+
+        bool waterOn = false;
+        for (int j = 0; j < possibleWaterKeys.Length; j++)
+        {
+            if (Input.GetKey(possibleWaterKeys[j]))
             {
-                if (Input.GetKeyDown(gardenLayers[i].waterKey))
+                waterOn = true;
+                if (Input.GetKeyDown(possibleWaterKeys[j]))
                 {
                     InputChangeHandler(false);
                 }
+            }
+        }
+
+        for (int i = 0; i < gardenLayers.Length; i++)
+        {
+            if (waterOn)
+            {
                 gardenLayers[i].biome.humidity = Mathf.Clamp01(gardenLayers[i].biome.humidity + waterRate * Time.deltaTime);
             }
             rain += gardenLayers[i].biome.humidity / gardenLayers.Length;
