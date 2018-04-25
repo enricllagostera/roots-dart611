@@ -1,3 +1,20 @@
+Alternative controllers are the main topic of my PhD research, especially how they might provoke reflection. When making *Roots*, our design process focused on exploring specific ways to work with alternative controllers that put the materiality and encounter with the object as key.
+
+I'd wanted to make a game that focused on children and adult play for a while. When we assumed that goal, it was immensely productive, because it lead to a layered-yet-holistic approach to design. This fit well with our design goals of discussing intergenerational care and contemplative gameplay, as well as with our creation process.
+
+Our design process when building these invitations was a valuable experience to me. Looking at how our design evolved, I believe we were successful in progressively coming up with different layers and moments for that invitation. The ways in which each aspect of the object, from the screen position and player positions in relation to it, the spatial framing of the inside / outside relationship, the creation of this evocative cover and soft volume of the well, these were well discussed and considered in a holistic approach by both of us. This was also present when developing the visuals, pace and sound of the digital game. I find this to be a good sign of a successful collaboration, the ways in which the process mirrored these shared concerns and visions for the game. We had a good dynamic throughout the process, with good dialogue, sharing of work and motivation.
+
+By working together, I feel we were able to tackle a project with a large scope: a full digital game plus a physical interface is a lot of work. Our choice of project was great for me personally in terms of learning new techniques and exploring soft materials, such as fabric, conductive thread and foam. I believe it expanded my repertoire technically as well as opened up new directions for how to distribute, conceive and contextualize alternative controllers.
+
+The scope of the project was less optimal because it meant that we had a large number of concerns and so had to pragmatically settle soon for working versions of different parts of the game. This means that we could have developed in more depth many different aspects, such as the cycle of garden layers or the ways of physically connecting roots. There's much potential for further development there, especially in terms of how to bring reflection forward by providing a more concrete story / issue for players to navigate.
+
+This difficulty of large project scope was especially noticeable for us in terms of playtesting and learning from our players. We were only able to have playtests by the end of our process, and some of the questions raised (such as the issue of scale of the object and different root connection affordances) could have been productive design directions. Discovering ways to playtest and refine ideas earlier is an interesting challenge for future projects that need both a very specific materiality and an original digital part.
+
+
+
+
+
+---
 
 - alternative controllers
   - as invitation
