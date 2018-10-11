@@ -209,7 +209,7 @@ MonoBehaviour:
     type: 2}
   deadPlantFX: {fileID: 114575792699874908, guid: caa8a573b8a08b74a8991d68f476015a,
     type: 2}
-  activeRange: {x: 0.5, y: 1}
+  activeRange: {x: 0.2, y: 1}
 --- !u!212 &212201130950560466
 SpriteRenderer:
   m_ObjectHideFlags: 1

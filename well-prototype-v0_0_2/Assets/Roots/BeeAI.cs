@@ -182,7 +182,7 @@ public class BeeAI : MonoBehaviour
         bee.animator.SetBool("Happy", false);
         bee.animator.SetBool("Surprised", false);
         bee.canTeleport = true;
-        yield return new WaitForSeconds(Random.Range(1f, 3f));
+        yield return new WaitForSeconds(Random.Range(0.5f, 2f));
         bee.canTeleport = false;
         StartCoroutine(Execute());
     }

@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Colorful;
 
 public class Well : Singleton<Well>
 {
+    public Bee prefabBee;
     public AnimationCurve movementCurve;
     public float layerOffset;
     public Gradient gradient;
@@ -47,10 +49,20 @@ public class Well : Singleton<Well>
     public float instructionInterval;
     public float instructionFadeFactor;
     public SpriteRenderer instructionImg;
+    private Plant[] allPlants;
+
+
+    public float beeTimer;
+    public float beeInterval;
+    public float ageThreshold;
+    public Bee lastBeeCreated;
+    public float ageFactor;
+    public Transform deadBeeFX;
 
     void Start()
     {
         gardenLayers = FindObjectsOfType<Garden>();
+
         // gameplay-related setup
         foreach (var layer in gardenLayers)
         {
@@ -109,6 +121,35 @@ public class Well : Singleton<Well>
         }
         rainAmbienceSFX.SetVolume(rain);
         UpdateInputMetrics();
+
+        allPlants = FindObjectsOfType<Plant>();
+        float allAge = 0;
+        allAge = allPlants.Sum(p => p.age);
+        print("plant age: " + allAge);
+
+        beeTimer -= Time.deltaTime;
+        if (beeTimer <= 0)
+        {
+            beeTimer = beeInterval;
+            var allBees = FindObjectsOfType<Bee>();
+            var bee = allBees.OrderBy(b => b.sorting).Last();
+            var visual = bee.transform.Find("Visual");
+            if (allAge > ageThreshold && allBees.Length < 30)
+            {
+                // new bee
+                lastBeeCreated = Instantiate<Bee>(bee, bee.transform.position, bee.transform.rotation, transform);
+                lastBeeCreated.currentGardenIndex = bee.currentGardenIndex;
+                lastBeeCreated.Start();
+            }
+            else if (allBees.Length > 1 && allAge < ageThreshold * ageFactor)
+            {
+                // kill bee
+                Instantiate<Transform>(deadBeeFX, visual.transform.position, visual.transform.rotation);
+                Destroy(bee.gameObject);
+                beeTimer = beeInterval * ageFactor;
+            }
+
+        }
     }
 
 

@@ -27,10 +27,8 @@ public class Bee : MonoBehaviour
     public float teleportProgressLimit;
     public TeleportFX teleportFX;
 
-    void Start()
+    public void Start()
     {
-        currentGardenIndex = 4;
-        _root = Well.Instance.gardenLayers[currentGardenIndex].transform.position;
         _visual = transform.Find("Visual");
         _radius = groundRadius;
         Vector3 pos = _root;
@@ -38,10 +36,13 @@ public class Bee : MonoBehaviour
         _visual.localPosition = pos;
         animator = _visual.GetComponent<Animator>();
         _sprite = _visual.GetComponent<SpriteRenderer>();
-        canTeleport = true;
+        _root = Well.Instance.gardenLayers[currentGardenIndex].transform.position;
+        transform.position = _root;
+        _sprite.sortingOrder = Well.Instance.gardenLayers[currentGardenIndex].baseSortingOrder + 15;
+        sorting = _sprite.sortingOrder;
     }
 
-    void Update()
+    public void Update()
     {
         int oldIndex = currentGardenIndex;
         if (canTeleport)

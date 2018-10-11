@@ -70,6 +70,7 @@ public class Plant : MonoBehaviour
         if (state == EPlantState.INERT)
         {
             nutrientFX.SetBool("Active", false);
+            age = 0;
             return;
         }
 
@@ -86,8 +87,11 @@ public class Plant : MonoBehaviour
         activeGrowth = Input.GetKey(this.growthKey);
         activeNutrient = activeGrowth;
 
-        bool alive = (state == EPlantState.SEEDLING || state == EPlantState.NORMAL);
-        age += Time.deltaTime * (alive ? 1f : -1f);
+        bool alive = (state == EPlantState.SEEDLING);
+        if (!alive)
+        {
+            age -= Time.deltaTime;
+        }
 
         if (oldInput != activeGrowth && age > 0.2f)
         {
@@ -102,7 +106,7 @@ public class Plant : MonoBehaviour
             nutrientFX.SetBool("Active", activeNutrient);
             if (activeGrowth)
             {
-
+                age += Time.deltaTime;
                 visual.transform.localScale = Vector3.one * (1f + (growthAnimationMod *
                     Mathf.Sin((Time.realtimeSinceStartup + transform.position.z) * growthAnimationSpeed)));
                 visual.transform.localScale *= _scaleMod;

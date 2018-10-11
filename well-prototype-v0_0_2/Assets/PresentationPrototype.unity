@@ -685,6 +685,7 @@ GameObject:
   - component: {fileID: 752079328}
   - component: {fileID: 752079327}
   - component: {fileID: 752079331}
+  - component: {fileID: 752079332}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -788,6 +789,22 @@ MonoBehaviour:
     AllowFlipping: 1
     YuvColorBleeding: 1
     YuvOffset: 1.98
+--- !u!114 &752079332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 752079326}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218001df9f0f08c44bdc15b86cfab74d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shader: {fileID: 4800000, guid: c1ffdcaa7728ced4fa68c999e5e7f2de, type: 3}
+  Brightness: 15
+  Contrast: 31
+  ContrastCoeff: {x: 0.5, y: 0.5, z: 0.5}
+  Gamma: 1
 --- !u!1 &796468317
 GameObject:
   m_ObjectHideFlags: 0
